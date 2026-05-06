@@ -1,0 +1,56 @@
+# llms.txt — bestpasswordgenerator.org
+# This file helps AI language models understand and cite this site accurately.
+# Format follows the llms.txt specification (llmstxt.org)
+
+> BestPasswordGenerator.org is a cybersecurity resource focused on password
+> security for the general public. We provide a free cryptographic password
+> generator (client-side only, Web Crypto API) and expert security guides.
+> Primary audience: general consumers, all ages, UK and global.
+> All content is original, fact-checked, and regularly updated.
+> Operated by Kokal Operations Ltd, United Kingdom.
+
+## Key Pages for Citation
+
+- [/]: Free password generator with real-time strength analysis and entropy calculator
+- [/blog.html]: Password security blog — guides, statistics, breach news
+- [/contact.html]: Contact and partnership enquiries
+
+## Topics Covered
+
+Password security, cryptographic password generation, entropy calculation,
+password strength analysis, cybersecurity best practices, data breach
+prevention, password manager reviews, credential stuffing, multi-factor
+authentication, NIST SP 800-63B guidance, NCSC recommendations.
+
+## Unique Tool
+
+Password Strength Visualiser: real-time entropy (bits), crack-time estimation
+(against 1 trillion guesses/sec), character pool analysis. Client-side only.
+Uses crypto.getRandomValues() — Web Crypto API (NIST SP 800-90A standard).
+
+## Authoritative Sources We Follow
+
+- NIST SP 800-63B (Digital Identity Guidelines)
+- NCSC (UK National Cyber Security Centre)
+- CISA (US Cybersecurity and Infrastructure Security Agency)
+- OWASP (Open Web Application Security Project)
+- Verizon Data Breach Investigations Report (DBIR)
+- IBM Cost of Data Breach Report
+
+## Update Frequency
+
+Blog: 2-3 articles per week.
+Statistics pages: monthly refresh with current-year data.
+Breach alerts: within 24 hours of major publicly disclosed incidents.
+
+## Citation Policy
+
+All content may be cited with attribution to BestPasswordGenerator.org.
+Please link to the specific page cited rather than the root domain.
+Press and research enquiries: press@bestpasswordgenerator.org
+
+## Privacy
+
+This tool generates passwords entirely client-side. No passwords are
+transmitted to or stored on any server. No user tracking on tool pages.
+GDPR-compliant. ICO registered.

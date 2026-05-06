@@ -1,0 +1,39 @@
+name: Update Sitemap
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday 06:00 UTC
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate sitemap.xml
+        run: |
+          DOMAIN="https://bestpasswordgenerator.org"
+          DATE=$(date +%Y-%m-%d)
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+
+          # High priority pages
+          echo "  <url><loc>${DOMAIN}/</loc><lastmod>${DATE}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>" >> sitemap.xml
+          echo "  <url><loc>${DOMAIN}/blog.html</loc><lastmod>${DATE}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>" >> sitemap.xml
+
+          # Standard pages
+          for f in contact affiliate-disclosure privacy-policy terms cookie-policy; do
+            echo "  <url><loc>${DOMAIN}/${f}.html</loc><lastmod>${DATE}</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>" >> sitemap.xml
+          done
+
+          echo '</urlset>' >> sitemap.xml
+
+      - name: Commit sitemap
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "chore: auto-update sitemap [skip ci]"
+          git push

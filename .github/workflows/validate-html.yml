@@ -1,0 +1,38 @@
+name: Validate HTML
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for broken internal links
+        run: |
+          echo "Checking internal links..."
+          for file in *.html; do
+            echo "Checking: $file"
+            grep -oP 'href="[^"#]+"' "$file" | grep -v 'http' | grep -v 'mailto' | sed 's/href="//;s/"//' | while read link; do
+              if [ ! -f "$link" ]; then
+                echo "WARNING: Broken link in $file — $link"
+              fi
+            done
+          done
+          echo "Link check complete."
+
+      - name: Verify required files exist
+        run: |
+          required="index.html blog.html contact.html privacy-policy.html affiliate-disclosure.html terms.html cookie-policy.html robots.txt llms.txt sitemap.xml post.json 404.html"
+          for f in $required; do
+            if [ ! -f "$f" ]; then
+              echo "MISSING: $f"
+              exit 1
+            else
+              echo "OK: $f"
+            fi
+          done
