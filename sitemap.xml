@@ -4,16 +4,66 @@
 
   <url>
     <loc>https://bestpasswordgenerator.org/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://bestpasswordgenerator.org/blog.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- Blog post pages -->
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/6-billion-passwords-stolen-by-malware-2025-specops-report.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/nist-password-guidelines-2026-changes.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/how-to-create-strong-passwords-2026.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/password-breach-statistics-2026.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/best-password-managers-2026.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/what-is-credential-stuffing.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/mfa-guide-2026.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/password-generator-vs-password-manager.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -22,28 +72,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
     <loc>https://bestpasswordgenerator.org/privacy-policy.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://bestpasswordgenerator.org/affiliate-disclosure.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://bestpasswordgenerator.org/terms.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://bestpasswordgenerator.org/cookie-policy.html</loc>
     <lastmod>2026-05-06</lastmod>
