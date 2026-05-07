@@ -18,6 +18,12 @@
 
   <!-- Blog post pages -->
   <url>
+    <loc>https://bestpasswordgenerator.org/blog/149-million-credentials-leaked-unsecured-database-2026.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bestpasswordgenerator.org/blog/6-billion-passwords-stolen-by-malware-2025-specops-report.html</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
