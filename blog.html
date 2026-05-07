@@ -80,6 +80,9 @@ nav a.cur{color:#fff;background:rgba(255,255,255,.12)}
 .nores{text-align:center;padding:60px 20px;color:var(--t3)}
 .nores h3{font-size:1.1rem;margin-bottom:8px;color:var(--p)}
 .load{text-align:center;padding:60px;color:var(--t3);font-size:14px}
+.plink{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--bga);border-radius:50%;font-size:13px;color:var(--t3);text-decoration:none;transition:all .15s;flex-shrink:0}
+.plink:hover{background:var(--a);color:#fff;text-decoration:none}
+.pmeta .plink{margin-left:auto}
 
 /* SIDEBAR TEASER */
 .layout2{display:grid;grid-template-columns:1fr 320px;gap:32px;padding:0 22px 60px;max-width:1200px;margin:0 auto}
@@ -265,7 +268,8 @@ fetch('post.json')
 function renderFeatured(){
   var fp=allPosts.find(function(p){return p.featured;})||allPosts[0];
   if(!fp)return;
-  document.getElementById('featuredWrap').innerHTML='<div class="ftag">⭐ FEATURED</div><div class="fcard"><div class="fcardimg" style="'+bgMap[0]+'">'+fp.emoji+'</div><div class="fcardbody"><div class="bcat">'+fp.category+'</div><h2>'+fp.title+'</h2><p>'+fp.excerpt+'</p><div class="meta"><span>'+fp.date+'</span><span>·</span><span>'+fp.readtime+'</span><span>·</span><span>By '+fp.author+'</span></div><button class="readbtn" onclick="openPost(\''+fp.id+'\')">Read full article →</button></div></div>';
+  var fs=fp.slug||('post-'+fp.id);
+  document.getElementById('featuredWrap').innerHTML='<div class="ftag">⭐ FEATURED</div><div class="fcard"><div class="fcardimg" style="'+bgMap[0]+'">'+fp.emoji+'</div><div class="fcardbody"><div class="bcat">'+fp.category+'</div><h2>'+fp.title+'</h2><p>'+fp.excerpt+'</p><div class="meta"><span>'+fp.date+'</span><span>·</span><span>'+fp.readtime+'</span><span>·</span><span>By '+fp.author+'</span></div><div style="display:flex;gap:10px;align-items:center"><button class="readbtn" onclick="openPost(\''+fp.id+'\')">Read full article →</button><a href="/blog/'+fs+'.html" class="readbtn" style="background:transparent;border:2px solid var(--a);color:var(--a)" target="_blank">Open page ↗</a></div></div></div>';
 }
 
 function renderGrid(){
@@ -279,7 +283,8 @@ function renderGrid(){
   document.getElementById('rslt').textContent=filtered.length+' article'+(filtered.length===1?'':'s');
   var html='';
   filtered.forEach(function(p,i){
-    html+='<div class="pcard" role="listitem" onclick="openPost(\''+p.id+'\')" tabindex="0"><div class="pimg" style="'+bgMap[i%bgMap.length]+'">'+p.emoji+'</div><div class="pbody"><div class="bcat">'+p.category+'</div><h3>'+p.title+'</h3><p>'+p.excerpt+'</p><div class="pmeta"><span>'+p.date+'</span><span class="rtag">'+p.readtime+'</span></div></div></div>';
+    var slug=p.slug||('post-'+p.id);
+    html+='<div class="pcard" role="listitem" onclick="openPost(\''+p.id+'\')" tabindex="0"><div class="pimg" style="'+bgMap[i%bgMap.length]+'">'+p.emoji+'</div><div class="pbody"><div class="bcat">'+p.category+'</div><h3>'+p.title+'</h3><p>'+p.excerpt+'</p><div class="pmeta"><span>'+p.date+'</span><span class="rtag">'+p.readtime+'</span><a href="/blog/'+slug+'.html" class="plink" onclick="event.stopPropagation()" title="Open standalone page" target="_blank">↗</a></div></div></div>';
   });
   document.getElementById('pgrid').innerHTML=html||'';
   document.getElementById('nores').style.display=filtered.length?'none':'block';
@@ -288,7 +293,8 @@ function renderGrid(){
 function renderSidebar(){
   var tl=document.getElementById('stl');
   allPosts.slice(0,5).forEach(function(p){
-    tl.innerHTML+='<a onclick="openPost(\''+p.id+'\')" href="#">'+p.title+'</a>';
+    var ps=p.slug||('post-'+p.id);
+    tl.innerHTML+='<a href="/blog/'+ps+'.html">'+p.title+'</a>';
   });
   var cats=[...new Set(allPosts.map(function(p){return p.category;}))];
   var cl=document.getElementById('cattl');
@@ -308,10 +314,11 @@ function filterPosts(){renderGrid();}
 function openPost(id){
   var p=allPosts.find(function(x){return x.id===id;});
   if(!p)return;
+  var slug=p.slug||('post-'+p.id);
   document.getElementById('mcat').textContent=p.category;
   document.getElementById('mtit').textContent=p.title;
   document.getElementById('mmeta').innerHTML='<span>'+p.date+'</span><span>·</span><span>'+p.readtime+'</span><span>·</span><span>By '+p.author+', '+p.authorTitle+'</span>';
-  document.getElementById('mbody').innerHTML=p.content+'<div style="background:#f1f5f9;border-radius:8px;padding:16px;margin-top:24px;font-size:13px;color:#64748b"><strong>Disclaimer:</strong> This article is for informational purposes only. Consult a qualified cybersecurity professional for personalised advice.</div>';
+  document.getElementById('mbody').innerHTML=p.content+'<div style="margin-top:20px;text-align:center;padding-top:18px;border-top:1px solid var(--bd)"><a href="/blog/'+slug+'.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--a);color:#fff;padding:10px 24px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none" target="_blank">Open standalone page ↗</a></div><div style="background:#f1f5f9;border-radius:8px;padding:16px;margin-top:16px;font-size:13px;color:#64748b"><strong>Disclaimer:</strong> This article is for informational purposes only. Consult a qualified cybersecurity professional for personalised advice.</div>';
   document.getElementById('modal').classList.add('op');
   document.body.style.overflow='hidden';
 }
