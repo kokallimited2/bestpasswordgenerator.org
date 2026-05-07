@@ -6,6 +6,29 @@
   },
   "posts": [
     {
+      "slug": "6-billion-passwords-stolen-by-malware-2025-specops-report",
+      "title": "6 Billion Passwords Stolen by Malware in 2025: New Report Reveals Scale of Crisis",
+      "date": "7 May 2026",
+      "dateiso": "2026-05-07",
+      "category": "Statistics",
+      "emoji": "\ud83d\udcca",
+      "featured": false,
+      "readtime": "7 min read",
+      "author": "Security Research Team",
+      "authorTitle": "BestPasswordGenerator.org",
+      "excerpt": "Specops Software's 2026 Breached Password Report analysed over 6 billion passwords stolen by malware in 2025 alone \u2014 six times the previous year. Here's what it means for your security.",
+      "tags": [
+        "password-security",
+        "breach-statistics",
+        "specops",
+        "malware",
+        "infostealer",
+        "credential-theft"
+      ],
+      "content": "<p>Last year, cybercriminals stole over six billion passwords using malware \u2014 that's six times more than the 1.09 billion stolen in 2024. This staggering figure comes from Specops Software's 2026 Breached Password Report, which analysed credentials harvested by information-stealing malware (infostealers) globally. In our analysis of this report, combined with data from Huntress, Forbes Advisor, and CISA, a clear picture emerges: password-based attacks are accelerating at a rate most people don't realise.</p><h2>What the report found</h2><p>The Specops report examined over 6 billion passwords collected by infostealer malware in 2025. To put that in context, that's roughly 190 passwords stolen every second. The report also found that a significant portion of these credentials came from enterprise environments \u2014 employees logging into corporate systems with passwords that had already been compromised elsewhere.</p><p>Infostealers \u2014 a type of malware that silently extracts saved passwords from browsers, email clients, and VPNs \u2014 now account for 24% of all cyber incidents according to Huntress's 2025 Cyber Threat Report. These tools are widely available on underground forums for as little as $50, making credential theft accessible to almost anyone.</p><p>Our research team cross-referenced the Specops findings with data from the Verizon Data Breach Investigations Report 2024, which found that 81% of breaches involve weak or stolen passwords. Combined with the 6 billion figure, it's clear the attack surface is growing faster than defences are improving.</p><h2>How infostealers work</h2><p>Infostealer malware typically arrives through phishing emails, fake software downloads, or malicious browser extensions. Once installed, it:</p><ul><li>Scans browser databases for saved passwords and autofill data</li><li>Extracts cookies and session tokens (bypassing passwords entirely)</li><li>Uploads stolen credentials to a command-and-control server</li><li>Sells the harvested data on dark web markets for an average of $10 per credential bundle</li></ul><p>What makes infostealers particularly dangerous is that they bypass many traditional security measures. A strong password is still important \u2014 but if the password is saved in a browser on an infected machine, an infostealer will grab it regardless of complexity.</p><h2>The growing scale of credential exposure</h2><p>The 6 billion figure from Specops aligns with broader industry data. Security Magazine estimates that over 24 billion credentials are exposed annually through all forms of data breach. When we combine malware-harvested passwords with credentials stolen from company database breaches (like the RockYou2024 dataset which contained 4.5 billion credentials), the scale of the problem becomes clear.</p><p>According to a Forbes Advisor survey cited by Huntress, 46% of people had at least one password stolen in 2024 alone. Of those, 35% said weak passwords were the direct cause, while 30% attributed the theft to reusing passwords across accounts. The numbers suggest that most people will experience credential theft at some point \u2014 it's not a matter of if, but when.</p><h2>What this means for you</h2><p>Here's the practical takeaway from these numbers. First: every password you use should be unique. If malware steals one password from your browser, it should only compromise one account \u2014 not every account you own. Second: never save passwords in your browser if you can avoid it. A dedicated password manager like Bitwarden or 1Password stores passwords in an encrypted vault that infostealers cannot easily access. Third: enable multi-factor authentication (MFA) on every account that supports it. Microsoft research has found that MFA blocks 99.9% of automated attacks, even when passwords are compromised.</p><p>We also recommend checking if your credentials have been exposed using Have I Been Pwned (free, no sign-up required). Enter your email address to see if any accounts associated with it have appeared in known breaches.</p><h2>The bottom line</h2><p>Six billion passwords stolen by malware in one year is not a number we can ignore. The Specops report makes clear that password-based attacks are not declining \u2014 they're accelerating. But the defences are simple, free, and available to everyone: unique passwords per account, a proper password manager, and MFA turned on. Those three steps would prevent the overwhelming majority of malware-harvested credential attacks.</p><p>For more on how to create passwords that can't be cracked, see our complete guide to <a href=\"\">strong password creation</a>. And to check how password managers compare, read our independent <a href=\"\">password manager review</a>.</p>",
+      "id": "8"
+    },
+    {
       "slug": "nist-password-guidelines-2026-changes",
       "title": "NIST Password Guidelines 2026: What Changed and Why It Matters",
       "date": "7 May 2026",
