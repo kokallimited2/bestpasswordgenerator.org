@@ -118,4 +118,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- New post: Kaspersky MD5 study -->
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/kaspersky-md5-password-hashes-crackable-2026-study.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
