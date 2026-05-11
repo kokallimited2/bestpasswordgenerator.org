@@ -126,4 +126,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- New post: Canvas breach -->
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/canvas-breach-275-million-students-password-safety.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
