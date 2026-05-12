@@ -140,4 +140,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- New post: AI zero-day exploit -->
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/first-ai-generated-zero-day-exploit-google-2026.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
