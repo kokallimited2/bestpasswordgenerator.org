@@ -40,7 +40,13 @@
         {"@type":"ListItem","position":3,"name":"YellowKey Zero-Day Bypasses BitLocker — Stolen Laptops Are N","item":"https://bestpasswordgenerator.org/blog/yellowkey-bitlocker-bypass-zero-day-microsoft-2026.html"}
       ]
     },
-    {"@type":"FAQPage","mainEntity":[]}
+    {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is YellowKey?","acceptedAnswer":{"@type":"Answer","text":"YellowKey is a zero-day exploit that bypasses Microsoft BitLocker full-disk encryption. It requires physical access to the target device and a USB drive loaded with specially crafted files. When the attacker enters a specific key sequence during boot"}},
+{"@type":"Question","name":"Does YellowKey work on all versions of BitLocker?","acceptedAnswer":{"@type":"Answer","text":"Early analysis suggests YellowKey affects all current Windows versions that use BitLocker, including Windows 10, Windows 11, and Windows Server editions. Microsoft has not yet confirmed the full scope of affected versions."}},
+{"@type":"Question","name":"Can YellowKey be used remotely?","acceptedAnswer":{"@type":"Answer","text":"No. YellowKey requires physical access to the target machine — the attacker must plug in a USB drive and interact with the boot sequence directly. It's not a remote exploit. However, for stolen laptops, this requirement is trivially met."}},
+{"@type":"Question","name":"Does enabling a BitLocker PIN fully protect against YellowKey?","acceptedAnswer":{"@type":"Answer","text":"According to current threat intelligence analysis, yes — a BitLocker PIN prevents the YellowKey attack from executing. The PIN must be entered before the drive decrypts, which blocks the USB-based injection technique. We recommend combining this with"}},
+{"@type":"Question","name":"How is GreenPlasma different from YellowKey?","acceptedAnswer":{"@type":"Answer","text":"GreenPlasma is a privilege escalation vulnerability, not a BitLocker bypass. It gives an attacker already inside your system full SYSTEM-level access. Unlike YellowKey, there's no known mitigation yet for GreenPlasma — organizations should focus on e"}},
+{"@type":"Question","name":"Should I stop using BitLocker?","acceptedAnswer":{"@type":"Answer","text":"No. BitLocker is still effective against the vast majority of threats — including theft. Even with YellowKey, BitLocker with a PIN enabled provides strong protection. The vulnerability is in the default configuration (no PIN), not in BitLocker's core"}},
+{"@type":"Question","name":"Will Microsoft patch YellowKey and GreenPlasma?","acceptedAnswer":{"@type":"Answer","text":"Microsoft has not yet issued a statement about either zero-day, but given the severity and public disclosure, an emergency out-of-band patch is possible. In the meantime, the mitigations above (BitLocker PIN + BIOS password) are the only known defens"}}]}
   ]
 }
 </script>
