@@ -162,4 +162,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- New post: Canvas data not deleted, phishing wave expected -->
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/canvas-breach-data-not-deleted-phishing-waves-expected.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
