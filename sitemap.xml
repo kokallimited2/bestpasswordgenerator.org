@@ -170,4 +170,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- New post: OpenAI TanStack supply chain attack -->
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/openai-tanstack-npm-supply-chain-credential-theft-2026.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
