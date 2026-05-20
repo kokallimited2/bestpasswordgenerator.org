@@ -220,4 +220,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/verizon-dbir-2026-vulnerability-exploitation-overtakes-credential-theft.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
