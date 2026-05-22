@@ -1,33 +1,20 @@
-# robots.txt — bestpasswordgenerator.org
-# Updated: May 2026
-
-# Allow all standard crawlers
 User-agent: *
 Allow: /
-Disallow: /assets/drafts/
-Disallow: /admin/
 
-# AI crawlers — explicitly allowed for citation eligibility
+# AI crawlers - explicitly allowed
 User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Googlebot
+User-agent: Claude-Web
 Allow: /
 
-User-agent: Bingbot
+User-agent: CCBot
 Allow: /
 
-User-agent: DuckDuckBot
+User-agent: PerplexityBot
 Allow: /
 
-# Sitemap location
-Sitemap: https://bestpasswordgenerator.org/sitemap.xml
+Sitemap: https://bestpasswordgenerator.org/blog/sitemap.xml
