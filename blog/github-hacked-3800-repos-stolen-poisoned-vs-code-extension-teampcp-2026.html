@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Hacked: 3,800 Internal Repositories Stolen via Poison</title>
+<meta name="description" content="GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension">
+<link rel="canonical" href="https://bestpasswordgenerator.org/blog/github-hacked-3800-repos-stolen-poisoned-vs-code-extension-teampcp-2026.html">
+<base href="/">
+<meta property="og:title" content="GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension">
+<meta property="og:description" content="GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension">
+<meta property="og:url" content="https://bestpasswordgenerator.org/blog/github-hacked-3800-repos-stolen-poisoned-vs-code-extension-teampcp-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://bestpasswordgenerator.org/og-image.png">
+<meta property="article:published_time" content="2026-05-22">
+<meta property="article:author" content="Security Research Team">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension">
+<meta name="twitter:description" content="GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension">
+<meta name="twitter:image" content="https://bestpasswordgenerator.org/og-image.png">
+<meta property="article:modified_time" content="2026-05-22">
+<meta property="article:section" content="Threat Intelligence">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bestpasswordgenerator.org/#organization",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "sameAs": [
+        "https://twitter.com/"
+      ],
+      "knowsAbout": [
+        "password security",
+        "cybersecurity"
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bestpasswordgenerator.org/#website",
+      "url": "https://bestpasswordgenerator.org/",
+      "name": "BestPasswordGenerator.org",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bestpasswordgenerator.org/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://bestpasswordgenerator.org/#webapp",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://bestpasswordgenerator.org/#webapi",
+      "name": "BestPasswordGenerator.org API",
+      "url": "https://bestpasswordgenerator.org/",
+      "description": "Generate secure passwords programmatically",
+      "potentialAction": [
+        {
+          "@type": "GenerateAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bestpasswordgenerator.org/?length=16&count=1"
+          }
+        }
+      ],
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bestpasswordgenerator.org/#author",
+      "name": "Security Research Team",
+      "jobTitle": "Cybersecurity Researcher",
+      "url": "https://bestpasswordgenerator.org/about.html",
+      "sameAs": [
+        "https://bestpasswordgenerator.org/about.html"
+      ],
+      "knowsAbout": [
+        "password security",
+        "NIST guidelines",
+        "cryptography",
+        "cybersecurity"
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://bestpasswordgenerator.org/blog/github-hacked-3800-repos-stolen-poisoned-vs-code-extension-teampcp-2026.html#article",
+      "headline": "GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension",
+      "description": "GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension",
+      "image": "https://bestpasswordgenerator.org/og-image.png",
+      "author": {
+        "@id": "https://bestpasswordgenerator.org/#author"
+      },
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://bestpasswordgenerator.org/#website"
+      },
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://bestpasswordgenerator.org/blog/github-hacked-3800-repos-stolen-poisoned-vs-code-extension-teampcp-2026.html"
+      },
+      "wordCount": "1753",
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".callout"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://bestpasswordgenerator.org/blog/github-hacked-3800-repos-stolen-poisoned-vs-code-extension-teampcp-2026.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bestpasswordgenerator.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://bestpasswordgenerator.org/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GitHub Hacked: 3,800 Internal Repositories Stolen via Poison",
+          "item": "https://bestpasswordgenerator.org/blog/github-hacked-3800-repos-stolen-poisoned-vs-code-extension-teampcp-2026.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#0d2137;--pl:#1a365d;--a:#2563eb;--al:#3b82f6;--t:#1a202c;--t2:#4a5568;--t3:#718096;--s1:#f7fafc;--s2:#e2e8f0;--w:#fff;--b:#e53e3e;--g:#38a169}
+body{font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;background:var(--w);color:var(--t);line-height:1.7}
+nav{background:var(--p);padding:12px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+nav .logo{color:#fff;font-weight:900;font-size:20px;text-decoration:none}
+nav a{color:rgba(255,255,255,0.8);font-size:14px;text-decoration:none;margin-left:18px;transition:.2s}
+nav a:hover,nav a.cur{color:#fff}
+.post-container{max-width:800px;margin:0 auto;padding:36px 22px 60px}
+.tag{display:inline-block;background:var(--p);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+.breadcrumb{margin-bottom:18px;font-size:13px;color:var(--t3)}
+.breadcrumb a{color:var(--a);text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+h1{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;color:var(--t);line-height:1.3;max-width:700px;margin:0 auto 8px;text-align:center}
+.meta{font-size:13px;color:var(--t3);text-align:center;margin-bottom:28px}
+.callout{background:#fffbeb;border-left:4px solid var(--b);padding:16px 20px;margin:24px 0;border-radius:4px;font-size:15px}
+h2{font-size:clamp(1.2rem,2.5vw,1.5rem);font-weight:800;color:var(--t);margin:40px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--s2)}
+h2:first-of-type{margin-top:0}
+h3{font-size:clamp(1.05rem,2vw,1.2rem);font-weight:700;color:var(--t);margin:28px 0 10px}
+p,li{font-size:16px;line-height:1.8;color:var(--t2);margin:0 0 16px}
+li{margin-bottom:6px}
+ul,ol{padding-left:24px;margin:0 0 20px}
+a{color:var(--a);text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--s1);padding:2px 6px;border-radius:3px;font-size:14px;border:1px solid var(--s2)}
+.bcta{display:inline-block;background:linear-gradient(135deg,var(--p),var(--pl),#1e40af);color:#fff;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;margin:32px 0 0;transition:.2s}
+.bcta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,0.3);text-decoration:none}
+footer{background:var(--p);color:rgba(255,255,255,0.7);padding:32px 22px;text-align:center;font-size:13px;line-height:1.8;margin-top:48px}
+footer a{color:rgba(255,255,255,0.8);text-decoration:none;margin:0 6px}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.rpost{background:var(--s1);padding:16px;border-radius:8px;border:1px solid var(--s2);transition:.2s}
+.rpost:hover{border-color:var(--a);box-shadow:0 2px 8px rgba(37,99,235,0.1)}
+.rtag{display:inline-block;background:var(--a);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase}
+@media(max-width:600px){.post-container{padding:24px 16px 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">&#x1f511; BestPasswordGenerator</a>
+  <div>
+    <a href="/">Generator</a>
+<a href="/blog.html" class="cur">Blog</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <div class="post-container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> &#8250; <a href="/blog.html">Blog</a> &#8250;
+      <span>GitHub Hacked: 3,800 Internal Repositories Stolen via Poison</span>
+    </div>
+
+    <div style="text-align:center;margin-bottom:28px">
+      <div class="tag" style="margin-bottom:8px">Threat Intelligence</div>
+      <h1>🔑 GitHub Hacked: 3,800 Internal Repositories Stolen via Poisoned VS Code Extension</h1>
+      <div class="meta">By <strong>Security Research Team</strong>, BestPasswordGenerator.org &middot; 22 May 2026 &middot; 8 min read &middot; 1,753 words</div>
+    </div>
+
+<div class="toc" style="background:var(--s1);border-radius:12px;padding:20px 24px;margin-bottom:32px;border:1px solid var(--s2)"><h3 style="margin:0 0 8px;font-size:14px;color:var(--t2)">On this page</h3><ul style="margin:0;padding-left:18px;font-size:14px;line-height:2"><li><a href="#what-happened-github-confirms-the-breach">What Happened: GitHub Confirms the Breach</a></li>
+<li><a href="#the-attack-vector-a-poisoned-vs-code-extension">The Attack Vector: A Poisoned VS Code Extension</a></li>
+<li><a href="#who-is-teampcp-a-supply-chain-terror">Who Is TeamPCP? A Supply Chain Terror</a></li>
+<li><a href="#why-this-matters-for-your-password-security">Why This Matters for Your Password Security</a></li>
+<li><a href="#how-to-protect-yourself-after-the-github-breach">How to Protect Yourself After the GitHub Breach</a></li>
+<li><a href="#the-bigger-picture-supply-chain-attacks-are-the-new-normal">The Bigger Picture: Supply Chain Attacks Are the New Normal</a></li>
+<li><a href="#expert-analysis-why-developer-tools-are-the-perfect-target">Expert Analysis: Why Developer Tools Are the Perfect Target</a></li>
+<li><a href="#faqs-github-vs-code-extension-breach">FAQs: GitHub VS Code Extension Breach</a></li>
+</ul></div>
+
+<h2 id="what-happened-github-confirms-the-breach">What Happened: GitHub Confirms the Breach</h2>
+<p>On May 19, 2026, GitHub confirmed that hackers had breached its internal systems and stolen approximately <strong>3,800 internal repositories</strong>. The attack, attributed to the infamous threat group TeamPCP, was executed through a surprisingly simple vector: a poisoned Visual Studio Code extension installed on a single GitHub employee's development machine.</p>
+<p>GitHub announced the breach via X (formerly Twitter), stating: <em>"Our current assessment is that the activity involved exfiltration of GitHub-internal repositories only. The attacker's current claims of ~3,800 repositories are directionally consistent with our investigation so far."</em> The company immediately rotated critical secrets, prioritized the highest-impact credentials, and isolated affected endpoints.</p>
+<p>The threat actor TeamPCP listed the stolen data on BreachForums with a minimum price of $50,000, later relisting it on the Lapsus$ data leak site for $95,000 according to dark web researcher Matthew Maynard. The message from TeamPCP was blunt: <em>"This is not a ransom. We do not care about extorting GitHub. One buyer and we shred the data on our end."</em></p>
+<p>While GitHub stated that <strong>no customer data was compromised</strong>, the breach represents a seismic event in the software supply chain security landscape. If GitHub itself can fall victim to a poisoned IDE extension, no organization is safe.</p>
+<h2 id="the-attack-vector-a-poisoned-vs-code-extension">The Attack Vector: A Poisoned VS Code Extension</h2>
+<p>Security researchers quickly identified the compromised extension as <strong>Nx Console</strong> (<code>nrwl.angular-console</code>, version 18.95.0), published on May 18, 2026. The malicious version was live for just 18 minutes before being taken down, but that was enough time for it to reach at least one GitHub employee's development environment.</p>
+<p>Sophos X-Ops, which published a detailed analysis of the attack, recovered the malware responsible: a Python backdoor named <strong>cat.py</strong> installed at <code>/Users/%/.local/share/kitty/cat.py</code>. The backdoor is particularly sophisticated in its command-and-control approach:</p>
+<ul>
+<li>It uses GitHub's own Search API as a covert communication channel</li>
+<li>It polls <code>api.github.com/search/commits</code> every hour for the keyword <code>firedalazer</code></li>
+<li>It extracts commands from commit messages, verifies them against a built-in RSA public key, and downloads and executes arbitrary payloads</li>
+</ul>
+<p>This is the same malware family used in the recent TanStack supply chain compromise — a campaign that also hit OpenAI, Mistral AI, and UiPath.</p>
+<p>The attack exploited a fundamental trust model problem: <strong>VS Code extensions run with the same privileges as the editor itself</strong>. Once installed, an extension has full access to the developer's filesystem, credentials, SSH keys, cloud tokens, environment variables, and any internal systems the developer can reach. There is no meaningful pre-execution verification before extension code runs.</p>
+<p>As Charlie Eriksen, a security researcher at Aikido Security, noted: <em>"VS Code extensions have full access to all data on a developer's machine, including credentials, SSH keys, cloud keys, and all other secrets."</em></p>
+<h2 id="who-is-teampcp-a-supply-chain-terror">Who Is TeamPCP? A Supply Chain Terror</h2>
+<p>TeamPCP has become one of the most dangerous threat actors targeting the open source ecosystem in 2026. Their modus operandi is consistent: poison trusted developer tools and ride the trust chain into high-value targets.</p>
+<h3>TeamPCP's Known Campaigns in 2026</h3>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Month</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trivy (vulnerability scanner)</td>
+<td>March</td>
+<td>Led to 92 GB European Commission breach via cloud credential theft</td>
+</tr>
+<tr>
+<td>Checkmarx</td>
+<td>April</td>
+<td>Supply chain compromise through developer tooling</td>
+</tr>
+<tr>
+<td>Bitwarden CLI</td>
+<td>April</td>
+<td>Credential harvesting from developer environments</td>
+</tr>
+<tr>
+<td>TanStack npm packages</td>
+<td>May</td>
+<td>84 malicious packages; OpenAI, Mistral AI, UiPath affected</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td>May</td>
+<td>3,800 internal repos stolen via poisoned Nx Console extension</td>
+</tr>
+</tbody>
+</table>
+<p>The group also created the <strong>Shai-Hulud</strong> self-replicating worm (named after the sandworms from Dune), which targets JavaScript and Python repositories. They recently published the worm's source code on GitHub itself, taunting the platform's security teams.</p>
+<p>Mackenzie Jackson of Aikido Security summed up the severity: <em>"Developer workstations are the number one target in supply chain attacks right now, and this is exactly why. TeamPCP has compromised Trivy, Checkmarx, Bitwarden CLI, TanStack, and now GitHub, all in 2026, all through developer tooling."</em></p>
+<h2 id="why-this-matters-for-your-password-security">Why This Matters for Your Password Security</h2>
+<p>You might be thinking: <em>"I'm not a developer. Why should I care about a GitHub breach?"</em> The answer is that this attack has cascading implications for anyone who uses software — which is everyone.</p>
+<p><strong>First, the supply chain angle.</strong> GitHub hosts millions of open source projects that power the tools and services we use every day. If someone gains access to GitHub's internal repositories, they could potentially find ways to inject backdoors into widely-used code before it reaches users. The same poisoned developer tooling technique that hit GitHub could easily be turned against any software vendor your organization relies on.</p>
+<p><strong>Second, stolen credentials.</strong> TeamPCP specializes in harvesting credentials from developer environments. The SSH keys, API tokens, and cloud secrets stolen in this breach could be used for months or years to come. While GitHub says customer data wasn't affected, the cascading effects of compromised internal credentials can take time to materialize.</p>
+<p><strong>Third, the attack vector is universal.</strong> If you use VS Code — and millions of developers do — you are trusting extensions with full access to your machine. The same mechanism that gave TeamPCP access to GitHub's internal systems could be used against any organization, including the companies that store your personal data.</p>
+<h2 id="how-to-protect-yourself-after-the-github-breach">How to Protect Yourself After the GitHub Breach</h2>
+<p>While you cannot undo GitHub's breach, you can take immediate steps to protect your own credentials and accounts:</p>
+<h3>1. Audit Your VS Code Extensions</h3>
+<p>If you or your team use VS Code, review every installed extension. Check the publisher reputation, when it was last updated, and what permissions it requires. Remove any extensions you do not actively use. Pay special attention to extensions with broad permission scopes, particularly those enabling shell execution or network access.</p>
+<h3>2. Rotate Developer Credentials</h3>
+<p>If you have any accounts linked to GitHub — and most developers do — consider rotating personal access tokens, SSH keys, and OAuth tokens. Use short-lived tokens where possible and enforce SSO for team accounts.</p>
+<h3>3. Enable Multi-Factor Authentication Everywhere</h3>
+<p>MFA remains the single most effective defense against credential theft. Even if your password or token is stolen, a second authentication factor can block account takeover. For detailed setup instructions, see our <a href="/blog/mfa-guide-2026.html">complete MFA setup guide</a>.</p>
+<h3>4. Use a Password Manager</h3>
+<p>A password manager generates and stores unique, complex passwords for every account. When a breach like this exposes credentials, having unique passwords means only the affected service is compromised — not every account you own. See our <a href="/blog/best-password-managers-2026.html">2026 password manager review</a> for our top recommendations.</p>
+<h3>5. Monitor for Credential Stuffing Attacks</h3>
+<p>Stolen credentials from any breach are frequently used in credential stuffing attacks — where attackers test stolen username-password combinations across hundreds of other services. If you reuse passwords, every breach puts all your accounts at risk. Learn more in our guide to <a href="/blog/what-is-credential-stuffing.html">credential stuffing and how to prevent it</a>.</p>
+<h3>6. Check Your Accounts on Have I Been Pwned</h3>
+<p>Visit <a href="https://haveibeenpwned.com">Have I Been Pwned</a> and enter your email address to check whether your credentials have appeared in any known breaches. If they have, change those passwords immediately.</p>
+<h2 id="the-bigger-picture-supply-chain-attacks-are-the-new-normal">The Bigger Picture: Supply Chain Attacks Are the New Normal</h2>
+<p>The GitHub breach is not an isolated incident. It is part of a broader trend where attackers target the software development supply chain — the tools, libraries, and platforms developers trust to build software.</p>
+<p>In just the past few weeks, we have covered <a href="/blog/openai-tanstack-npm-supply-chain-credential-theft-2026.html">the OpenAI TanStack supply chain attack</a>, where 84 malicious npm packages stole credentials from employee devices, and the <a href="/blog/microsoft-edge-stores-passwords-plaintext-security-risk.html">Microsoft Edge plaintext password vulnerability</a>, where saved passwords were found to be decryptable in RAM at all times. These stories share a common thread: the tools we trust to store and manage our credentials are increasingly the targets themselves.</p>
+<p>Ransomware and extortion groups are no longer content with encrypting files — they are after credentials, access tokens, and the keys to the kingdom. <a href="/blog/ai-phishing-attacks-surge-1265-percent-2026.html">AI-powered phishing attacks have surged 1,265%</a> this year, and threat actors like TeamPCP are using AI to automate the discovery of vulnerable extensions and packages at a scale humans could not achieve.</p>
+<h2 id="expert-analysis-why-developer-tools-are-the-perfect-target">Expert Analysis: Why Developer Tools Are the Perfect Target</h2>
+<p>Roy Akerman of Silverfort offered a sobering perspective on the GitHub breach: <em>"A VS Code extension runs with the same privileges as the editor itself, and once installed it has access to everything the developer can reach. There is no meaningful verification before that code executes. What makes this breach remarkable is not the entry point, it is that TeamPCP used GitHub's own infrastructure as the weapon end to end."</em></p>
+<p>Kayne McGladrey of IEEE echoed this: <em>"VS Code extensions run with full trust, which means that they get access to the developer's filesystem, credentials, cloud keys, SSH keys, and environment variables."</em></p>
+<p>Most security teams still have minimal visibility into what extensions or packages are installed on their developers' machines, or how recently those extensions were published. That blind spot is precisely what attackers like TeamPCP keep exploiting.</p>
+<h2 id="faqs-github-vs-code-extension-breach">FAQs: GitHub VS Code Extension Breach</h2>
+<p><strong>What happened in the GitHub breach?</strong>
+GitHub confirmed that on May 19, 2026, threat actor TeamPCP stole approximately 3,800 internal repositories after a GitHub employee installed a poisoned VS Code extension (Nx Console version 18.95.0). The stolen data was listed for sale on underground forums for $50,000 to $95,000.</p>
+<p><strong>Was my GitHub account or data affected?</strong>
+GitHub stated that only internal GitHub repositories were exfiltrated. Customer repositories, user accounts, and enterprise data were not affected. However, if you reuse passwords across services, your credentials could be at risk from credential stuffing attacks using data from this or related breaches.</p>
+<p><strong>What is TeamPCP?</strong>
+TeamPCP is a financially motivated threat group specializing in software supply chain attacks. In 2026 alone, they have compromised Trivy, Checkmarx, Bitwarden CLI, TanStack (affecting OpenAI, Mistral AI, and UiPath), and now GitHub. They are also responsible for the Shai-Hulud self-replicating worm.</p>
+<p><strong>How can I check if my credentials were stolen?</strong>
+Use <a href="https://haveibeenpwned.com">Have I Been Pwned</a> to check if your email address or credentials appear in known breach data. You can also use our <a href="/">password generator</a> to create strong, unique passwords for every account.</p>
+<p><strong>Should I stop using VS Code extensions?</strong>
+You do not need to stop using VS Code entirely, but you should audit your installed extensions regularly. Remove unused extensions, check publisher reputation, and be cautious about extensions that request broad permissions. Organizations should implement extension approval policies and monitor for anomalous extension behavior.</p>
+<p><strong>What should I do right now to protect myself?</strong>
+Rotate any credentials that might be linked to GitHub or developer tooling, enable multi-factor authentication on every account that supports it, use a password manager to generate unique passwords, and monitor your accounts for unusual activity. Start with our guide to <a href="/blog/how-to-create-strong-passwords-2026.html">creating strong passwords</a>.</p>
+
+    <div style="text-align:center">
+      <a href="/" class="bcta">Generate a Free Strong Password &#8594;</a>
+    </div>
+
+<div class="related" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--s2)"><h3 style="font-size:20px;margin-bottom:16px">Related Articles</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px"><div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/ai-found-record-security-bugs-may-2026-patch-guide.html">🛡️ AI Found 1,000+ Security Bugs This Month — Patch Your Passwo</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">17 May 2026</p></div>
+<div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/canvas-breach-data-not-deleted-phishing-waves-expected.html">⚠️ Canvas Data Wasn't Deleted, Security Experts Warn — Phishing</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">15 May 2026</p></div>
+<div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/yellowkey-bitlocker-bypass-zero-day-microsoft-2026.html">🛡️ YellowKey Zero-Day Bypasses BitLocker — Stolen Laptops Are N</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">14 May 2026</p></div>
+</div>
+</div>
+  </div>
+</main>
+
+<section style="background:#f0f4ff;padding:32px 22px;text-align:center;margin-top:0"><div style="max-width:800px;margin:0 auto"><h3 style="margin:0 0 14px;font-size:15px;color:#0d2137;font-weight:700">More Password Security Tools</h3><div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px"><a href="https://securekeygenerator.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; SecureKeyGen</a><a href="https://titanpasswords.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x2694;&#xfe0f; TitanPasswords</a><a href="https://freestrongpassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f510; Free Strong Password</a><a href="https://instantpasswordgenerator.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x26a1; Instant Password</a><a href="https://ironvaultkeys.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f5dd;&#xfe0f; Iron Vault Keys</a><a href="https://randompasswordtool.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; Random Pwd Tool</a><a href="https://safepassbuilder.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f468;&#x200d;&#x1f469;&#x200d;&#x1f467;&#x200d;&#x1f466; Safe Pass Builder</a><a href="https://trustypassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f6e1;&#xfe0f; Trusty Password</a></div></div></section>
+<footer>
+  <div class="flink">
+    <a href="/">Password Generator</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/affiliate-disclosure.html">Disclosure</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <p>&copy; 2026 BestPasswordGenerator.org &mdash; Free password generation and cybersecurity guides</p>
+</footer>
+
+<div id="cc" style="position:fixed;bottom:0;left:0;right:0;background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;font-size:13px;z-index:1000">
+  <span>We use cookies to improve your experience. <a href="/cookie-policy.html" style="color:var(--al);text-decoration:underline">Learn more</a></span>
+  <button onclick="this.parentElement.style.display='none'" style="background:var(--a);color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:13px">Accept</button>
+</div>
+
+</body>
+</html>

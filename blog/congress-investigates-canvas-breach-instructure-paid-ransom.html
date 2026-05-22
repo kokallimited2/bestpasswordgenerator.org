@@ -17,36 +17,204 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Congress Investigates Canvas Breach as Instructure Pays Ransom to ShinyHunters">
 <meta name="twitter:description" content="Congress has summoned Instructure’s CEO after the company paid a ransom to the ShinyHunters group behind the Canvas breach affecting 275 million students.">
+<meta name="twitter:image" content="https://bestpasswordgenerator.org/og-image.png">
+<meta property="article:modified_time" content="2026-05-13">
+<meta property="article:section" content="Threat Intelligence">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://bestpasswordgenerator.org/#organization",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "sameAs": [
+        "https://twitter.com/"
+      ],
+      "knowsAbout": [
+        "password security",
+        "cybersecurity"
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bestpasswordgenerator.org/#website",
+      "url": "https://bestpasswordgenerator.org/",
+      "name": "BestPasswordGenerator.org",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bestpasswordgenerator.org/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://bestpasswordgenerator.org/#webapp",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://bestpasswordgenerator.org/#webapi",
+      "name": "BestPasswordGenerator.org API",
+      "url": "https://bestpasswordgenerator.org/",
+      "description": "Generate secure passwords programmatically",
+      "potentialAction": [
+        {
+          "@type": "GenerateAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bestpasswordgenerator.org/?length=16&count=1"
+          }
+        }
+      ],
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bestpasswordgenerator.org/#author",
+      "name": "Security Research Team",
+      "jobTitle": "Cybersecurity Researcher",
+      "url": "https://bestpasswordgenerator.org/about.html",
+      "sameAs": [
+        "https://bestpasswordgenerator.org/about.html"
+      ],
+      "knowsAbout": [
+        "password security",
+        "NIST guidelines",
+        "cryptography",
+        "cybersecurity"
+      ]
+    },
+    {
       "@type": "Article",
+      "@id": "https://bestpasswordgenerator.org/blog/congress-investigates-canvas-breach-instructure-paid-ransom.html#article",
       "headline": "Congress Investigates Canvas Breach as Instructure Pays Ransom to ShinyHunters",
       "description": "Congress has summoned Instructure’s CEO after the company paid a ransom to the ShinyHunters group behind the Canvas breach affecting 275 million students.",
-      "author": {"@type":"Person","name":"Security Research Team","sameAs":["https://bestpasswordgenerator.org/about.html"]},
-      "publisher": {"@type":"Organization","name":"BestPasswordGenerator.org"},
+      "image": "https://bestpasswordgenerator.org/og-image.png",
+      "author": {
+        "@id": "https://bestpasswordgenerator.org/#author"
+      },
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://bestpasswordgenerator.org/#website"
+      },
       "datePublished": "2026-05-13",
       "dateModified": "2026-05-13",
-      "mainEntityOfPage": {"@type":"WebPage","@id":"https://bestpasswordgenerator.org/blog/congress-investigates-canvas-breach-instructure-paid-ransom.html"},
-      "wordCount": "1712"
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://bestpasswordgenerator.org/blog/congress-investigates-canvas-breach-instructure-paid-ransom.html"
+      },
+      "wordCount": "1712",
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".callout"
+        ]
+      }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://bestpasswordgenerator.org/blog/congress-investigates-canvas-breach-instructure-paid-ransom.html#breadcrumb",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://bestpasswordgenerator.org/"},
-        {"@type":"ListItem","position":2,"name":"Blog","item":"https://bestpasswordgenerator.org/blog.html"},
-        {"@type":"ListItem","position":3,"name":"Congress Investigates Canvas Breach as Instructure Pays Rans","item":"https://bestpasswordgenerator.org/blog/congress-investigates-canvas-breach-instructure-paid-ransom.html"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bestpasswordgenerator.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://bestpasswordgenerator.org/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Congress Investigates Canvas Breach as Instructure Pays Rans",
+          "item": "https://bestpasswordgenerator.org/blog/congress-investigates-canvas-breach-instructure-paid-ransom.html"
+        }
       ]
     },
-    {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"cross-site scripting (XSS) vulnerabilities","acceptedAnswer":{"@type":"Answer","text":"Yes. Even though Instructure says passwords weren’t stolen, ShinyHunters compromised administrative access to Canvas and could have accessed password hashes. Change your Canvas password immediately using a strong password generator, and make sure it’"}},
-{"@type":"Question","name":"3.6 TB of uncompressed data","acceptedAnswer":{"@type":"Answer","text":"They used the phrase “reached an agreement with the unauthorized actor” and stated they received “digital confirmation of data destruction (shred logs).” Security researchers universally interpret this as a ransom payment. The exact amount has not be"}},
-{"@type":"Question","name":"same XSS vulnerability","acceptedAnswer":{"@type":"Answer","text":"No. There is no technical mechanism for a victim to verify that stolen data has been permanently deleted. Ransomware groups have a long history of selling or re-leaking data after claiming deletion. The NIST and CISA guidance on ransomware response r"}},
-{"@type":"Question","name":"September 2025:","acceptedAnswer":{"@type":"Answer","text":"ShinyHunters threatened to leak data from 275 million students and faculty across 8,800 educational institutions using Canvas. The actual number of affected individuals may be lower, but Instructure has not provided a precise count."}},
-{"@type":"Question","name":"April 29, 2026:","acceptedAnswer":{"@type":"Answer","text":"Instructure stated it found no evidence that financial information, government IDs, or dates of birth were compromised. However, your name, email address, and student ID are now accessible to a known cybercrime group — and those are sufficient for hi"}},
-{"@type":"Question","name":"May 1:","acceptedAnswer":{"@type":"Answer","text":"The House Homeland Security Committee has requested a briefing from CEO Steve Daly covering four areas: how both intrusions happened, what data was accessed, what Instructure has done to contain the threat and notify affected institutions, and the ad"}},
-{"@type":"Question","name":"May 2:","acceptedAnswer":{"@type":"Answer","text":"Absolutely. NIST SP 800-63B recommends changing passwords only when there is evidence of compromise — which there absolutely is here. The updated 2026 guidelines emphasize length over complexity and recommend passphrases for high-security accounts. R"}}]}
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I change my Canvas password?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Even though Instructure says passwords weren’t stolen, ShinyHunters compromised administrative access to Canvas and could have accessed password hashes. Change your Canvas password immediately using a strong password generator, and make sure it’"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did Instructure actually confirm they paid the ransom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They used the phrase “reached an agreement with the unauthorized actor” and stated they received “digital confirmation of data destruction (shred logs).” Security researchers universally interpret this as a ransom payment. The exact amount has not be"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can ShinyHunters be trusted to have actually deleted the data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. There is no technical mechanism for a victim to verify that stolen data has been permanently deleted. Ransomware groups have a long history of selling or re-leaking data after claiming deletion. The NIST and CISA guidance on ransomware response r"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many schools and students are affected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ShinyHunters threatened to leak data from 275 million students and faculty across 8,800 educational institutions using Canvas. The actual number of affected individuals may be lower, but Instructure has not provided a precise count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my financial information at risk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instructure stated it found no evidence that financial information, government IDs, or dates of birth were compromised. However, your name, email address, and student ID are now accessible to a known cybercrime group — and those are sufficient for hi"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Congressional investigation looking into?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The House Homeland Security Committee has requested a briefing from CEO Steve Daly covering four areas: how both intrusions happened, what data was accessed, what Instructure has done to contain the threat and notify affected institutions, and the ad"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the NIST password guidelines (SP 800-63B) help in this situation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. NIST SP 800-63B recommends changing passwords only when there is evidence of compromise — which there absolutely is here. The updated 2026 guidelines emphasize length over complexity and recommend passphrases for high-security accounts. R"
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -171,7 +339,13 @@ footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-
 <div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/canvas-breach-data-not-deleted-phishing-waves-expected.html">⚠️ Canvas Data Wasn't Deleted, Security Experts Warn — Phishing</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">15 May 2026</p></div>
 <div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/yellowkey-bitlocker-bypass-zero-day-microsoft-2026.html">🛡️ YellowKey Zero-Day Bypasses BitLocker — Stolen Laptops Are N</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">14 May 2026</p></div>
 </div>
-</div>\n  </div>\n</main>\n\n<section style="background:#f0f4ff;padding:32px 22px;text-align:center;margin-top:0"><div style="max-width:800px;margin:0 auto"><h3 style="margin:0 0 14px;font-size:15px;color:#0d2137;font-weight:700">More Password Security Tools</h3><div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px"><a href="https://securekeygenerator.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; SecureKeyGen</a><a href="https://titanpasswords.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x2694;&#xfe0f; TitanPasswords</a><a href="https://freestrongpassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f510; Free Strong Password</a><a href="https://instantpasswordgenerator.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x26a1; Instant Password</a></div></div></section>\n<footer>\n  <div class="flink">
+</div>
+  </div>
+</main>
+
+<section style="background:#f0f4ff;padding:32px 22px;text-align:center;margin-top:0"><div style="max-width:800px;margin:0 auto"><h3 style="margin:0 0 14px;font-size:15px;color:#0d2137;font-weight:700">More Password Security Tools</h3><div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px"><a href="https://securekeygenerator.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; SecureKeyGen</a><a href="https://titanpasswords.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x2694;&#xfe0f; TitanPasswords</a><a href="https://freestrongpassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f510; Free Strong Password</a><a href="https://instantpasswordgenerator.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x26a1; Instant Password</a><a href="https://ironvaultkeys.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f5dd;&#xfe0f; Iron Vault Keys</a><a href="https://randompasswordtool.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; Random Pwd Tool</a><a href="https://safepassbuilder.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f468;&#x200d;&#x1f469;&#x200d;&#x1f467;&#x200d;&#x1f466; Safe Pass Builder</a><a href="https://trustypassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f6e1;&#xfe0f; Trusty Password</a></div></div></section>
+<footer>
+  <div class="flink">
     <a href="/">Password Generator</a>
     <a href="/blog.html">Blog</a>
     <a href="/about.html">About</a>
@@ -179,7 +353,10 @@ footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-
     <a href="/affiliate-disclosure.html">Disclosure</a>
     <a href="/contact.html">Contact</a>
   </div>
-  <p>&copy; 2026 BestPasswordGenerator.org &mdash; Free password generation and cybersecurity guides</p>\n</footer>\n\n<div id="cc" style="position:fixed;bottom:0;left:0;right:0;background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;font-size:13px;z-index:1000">
+  <p>&copy; 2026 BestPasswordGenerator.org &mdash; Free password generation and cybersecurity guides</p>
+</footer>
+
+<div id="cc" style="position:fixed;bottom:0;left:0;right:0;background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;font-size:13px;z-index:1000">
   <span>We use cookies to improve your experience. <a href="/cookie-policy.html" style="color:var(--al);text-decoration:underline">Learn more</a></span>
   <button onclick="this.parentElement.style.display='none'" style="background:var(--a);color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:13px">Accept</button>
 </div>
