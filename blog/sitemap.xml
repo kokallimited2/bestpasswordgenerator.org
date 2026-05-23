@@ -36,6 +36,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://bestpasswordgenerator.org/blog/credential-stuffing-attacks-surge-password-reuse-risk-2026.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bestpasswordgenerator.org/blog/verizon-dbir-2026-vulnerability-exploitation-overtakes-credential-theft.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
