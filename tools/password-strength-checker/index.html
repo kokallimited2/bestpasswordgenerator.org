@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO PRIMARY -->
+  <title>Free Password Strength Checker — Test Your Password Security Online</title>
+  <meta name="description" content="Check how strong your password is instantly. Free password strength tester with real-time analysis, crack time estimates, entropy scoring & improvement tips. 100% client-side — your password never leaves your device.">
+  <meta name="keywords" content="password strength checker, password tester, how secure is my password, password strength test, strong password check, password crack time, entropy calculator">
+  <link rel="canonical" href="https://bestpasswordgenerator.org/tools/password-strength-checker/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Password Strength Checker — Test & Improve Your Passwords">
+  <meta property="og:description" content="Instantly check password strength with real-time analysis. Get entropy score, estimated crack time, and actionable improvement tips. 100% private — no data stored.">
+  <meta property="og:image" content="https://bestpasswordgenerator.org/assets/img/og-tools.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bestpasswordgenerator.org/tools/password-strength-checker/">
+  <meta property="og:site_name" content="Best Password Generator">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Password Strength Checker">
+  <meta name="twitter:description" content="Check your password strength instantly. Free tool with crack time estimates & tips.">
+
+  <!-- Icons & Preconnect -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><path d='M18 2L4 8v10c0 9.1 6 17.5 14 19.6C26 35.5 32 27.1 32 18V8L18 2z' fill='%232563eb'/><rect x='15.5' y='17' width='5' height='4' rx='1' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema.org markup -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Password Strength Checker",
+      "url": "https://bestpasswordgenerator.org/tools/password-strength-checker/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free online tool to check and analyse password strength in real-time. Provides entropy score, estimated crack time, character variety analysis, pattern detection, and actionable improvement suggestions. All processing happens client-side — no data transmitted.",
+      "featureList": "Password strength analysis, entropy calculation, crack time estimation, character variety check, common password detection, sequential pattern detection, improvement tips",
+      "author": {
+        "@type": "Organization",
+        "name": "Best Password Generator",
+        "url": "https://bestpasswordgenerator.org/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Password Strength Checker",
+      "description": "Free tool to check and improve your password strength with real-time analysis.",
+      "url": "https://bestpasswordgenerator.org/tools/password-strength-checker/",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestpasswordgenerator.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://bestpasswordgenerator.org/tools/" },
+          { "@type": "ListItem", "position": 3, "name": "Password Strength Checker" }
+        ]
+      }
+    }
+  ]
+  </script>
+
+  <style>
+  :root {
+    --p: #0d2137; --pl: #1a3a5c; --a: #2563eb; --ah: #1d4ed8;
+    --g: #10b981; --am: #f59e0b; --r: #ef4444; --bg: #f8fafc;
+    --bga: #f1f5f9; --card: #fff; --t: #0f172a; --t2: #334155;
+    --t3: #64748b; --bd: #e2e8f0; --rad: 12px; --radl: 20px;
+    --sh: 0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.06);
+    --shm: 0 4px 6px -1px rgba(0,0,0,.1),0 10px 15px -3px rgba(0,0,0,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;font-size:16px}
+  a{color:var(--a);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* HEADER */
+  header{background:var(--p);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.15)}
+  .hi{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .lico{width:36px;height:36px;flex-shrink:0}
+  .ltx{font-size:17px;font-weight:800;color:#fff;letter-spacing:-.5px}
+  .ltx span{color:#60a5fa}
+  nav{display:flex;align-items:center;gap:2px}
+  nav a{color:rgba(255,255,255,.75);text-decoration:none;padding:7px 13px;border-radius:8px;font-size:14px;font-weight:500;transition:all .15s}
+  nav a:hover{background:rgba(255,255,255,.1);color:#fff;text-decoration:none}
+  nav a.cur{color:#fff;background:rgba(255,255,255,.12)}
+  .ncta{background:var(--a)!important;color:#fff!important;margin-left:6px}
+  .ncta:hover{background:var(--ah)!important}
+  .hbg{display:none;background:none;border:none;cursor:pointer;color:#fff;font-size:22px;padding:4px}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--p) 0%,var(--pl) 55%,#1e40af 100%);padding:70px 24px 50px;text-align:center}
+  .hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#93c5fd;padding:5px 15px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.8px;margin-bottom:22px;text-transform:uppercase}
+  .hero h1{font-size:clamp(1.9rem,5vw,3.4rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:18px;letter-spacing:-1px}
+  .hero h1 em{color:#60a5fa;font-style:normal}
+  .hdesc{font-size:1.1rem;color:rgba(255,255,255,.72);max-width:600px;margin:0 auto 36px}
+
+  /* TOOL CARD */
+  .gc{background:#fff;border-radius:var(--radl);padding:34px;max-width:680px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.28)}
+  .pdsp{background:var(--bg);border:2px solid var(--bd);border-radius:var(--rad);padding:16px 18px;display:flex;align-items:center;gap:10px;margin-bottom:22px;transition:border-color .2s}
+  .pdsp:focus-within{border-color:var(--a)}
+  #pw{flex:1;font-family:'Courier New',monospace;font-size:1.1rem;background:none;border:none;outline:none;color:var(--t);min-width:0;letter-spacing:.5px}
+  #pw::placeholder{color:var(--t3);letter-spacing:0}
+
+  /* STRENGTH RESULTS */
+  .ss{margin-bottom:22px}
+  .sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+  .sl{font-size:12px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.8px}
+  .sv{font-size:14px;font-weight:700}
+  .sbt{height:8px;background:var(--bd);border-radius:100px;overflow:hidden;margin-bottom:11px}
+  .sbf{height:100%;border-radius:100px;transition:width .4s ease,background .4s ease;width:0}
+  .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:18px}
+  .sp{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:10px;text-align:center}
+  .sp .v{font-size:.95rem;font-weight:700;color:var(--p)}
+  .sp .l{font-size:11px;color:var(--t3);margin-top:2px}
+
+  /* TIPS */
+  .tips{display:none;background:#fefce8;border:1px solid #fde68a;border-radius:var(--rad);padding:16px;margin-bottom:18px}
+  .tips h3{font-size:13px;font-weight:700;color:#92400e;margin-bottom:8px;text-transform:uppercase;letter-spacing:.6px}
+  .tips ul{list-style:none;padding:0}
+  .tips ul li{padding:5px 0 5px 20px;position:relative;font-size:13px;color:#78350f;line-height:1.5}
+  .tips ul li::before{content:"→";position:absolute;left:0;color:#d97706;font-weight:700}
+  .tih{display:flex;justify-content:center;gap:12px;margin-bottom:18px}
+  .tib{display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px 20px;border-radius:var(--rad);min-width:100px;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+  .tib .tv{font-size:1.6rem;letter-spacing:0;text-transform:none}
+
+  /* SECTIONS */
+  section{padding:70px 24px;max-width:1200px;margin:0 auto}
+  section h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--p);text-align:center;margin-bottom:36px;letter-spacing:-.4px}
+  .slim{max-width:760px;margin:0 auto}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:30px auto}
+  .fq{border:1px solid var(--bd);border-radius:var(--rad);margin-bottom:10px;overflow:hidden;background:var(--card)}
+  .fqt{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:600;font-size:15px;color:var(--t);background:none;border:none;width:100%;text-align:left;font-family:inherit;gap:12px}
+  .fqt:hover{background:var(--bga)}
+  .fqa{padding:0 20px 16px;font-size:14px;color:var(--t2);line-height:1.7;display:none}
+  .fq.op .fqa{display:block}
+  .fqar{transform:rotate(180deg);transition:transform .2s;font-size:12px}
+  .fq.op .fqar{transform:rotate(0)}
+
+  /* FOOTER */
+  footer{background:var(--p);color:#fff;padding:56px 0 26px}
+  .fi{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+  .fb .fbn{font-size:15px;font-weight:800;margin-bottom:8px}
+  .fb .fbn span{color:#60a5fa}
+  .fb p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.7}
+  .fc h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.4);margin-bottom:14px}
+  .fc a{display:block;color:rgba(255,255,255,.65);font-size:13px;padding:4px 0;transition:color .15s}
+  .fc a:hover{color:#60a5fa;text-decoration:none}
+  .fb .fbe{font-size:13px;color:rgba(255,255,255,.5);margin-top:12px}
+  .fb .fbe a{color:#93c5fd}
+  .fbot{border-top:1px solid rgba(255,255,255,.08);margin-top:36px;padding-top:22px;text-align:center;font-size:12px;color:rgba(255,255,255,.35)}
+  .fbot a{color:rgba(255,255,255,.5);margin:0 8px}
+  .fbot a:hover{color:#93c5fd;text-decoration:none}
+
+  @media(max-width:768px){
+    nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--p);padding:14px;flex-direction:column;border-top:1px solid rgba(255,255,255,.1)}
+    nav.op{display:flex}.hbg{display:block}
+    .gc{padding:22px 18px}
+    section{padding:54px 0}
+    .sg{grid-template-columns:1fr}
+    .tih{flex-wrap:wrap}
+    .fi{grid-template-columns:1fr;gap:30px}
+  }
+  </style>
+</head>
+<body>
+
+<!-- COOKIE CONSENT -->
+<div id="ck" style="display:flex">
+  <p>We use essential cookies to make our site work. See our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+  <div class="cbw" style="display:flex;gap:8px;flex-shrink:0">
+    <button class="cd" onclick="this.parentElement.parentElement.style.display='none'"
+      style="background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit">Decline optional</button>
+    <button class="ca" onclick="this.parentElement.parentElement.style.display='none'"
+      style="background:var(--a);color:#fff;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit">Accept all</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="hi">
+    <a href="/" class="logo" aria-label="Best Password Generator — Home">
+      <svg class="lico" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M18 2L4 8v10c0 9.1 6 17.5 14 19.6C26 35.5 32 27.1 32 18V8L18 2z" fill="#2563eb"/>
+        <rect x="14.5" y="16" width="7" height="6" rx="1.5" fill="white"/>
+        <circle cx="18" cy="19" r="2" fill="#2563eb"/>
+      </svg>
+      <span class="ltx">Best<span>Password</span></span>
+    </a>
+    <nav id="mn">
+      <a href="/">Generator</a>
+      <a href="/blog.html">Security Blog</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/tools/" class="cur">Tools</a>
+    </nav>
+    <button class="hbg" aria-label="Toggle navigation" onclick="document.getElementById('mn').classList.toggle('op')">☰</button>
+  </div>
+</header>
+
+<!-- HERO + TOOL -->
+<section class="hero" role="banner">
+  <div class="hbadge" aria-label="Tool type">🔒 FREE SECURITY TOOL</div>
+  <h1>Password <em>Strength Checker</em></h1>
+  <p class="hdesc">Type any password below to check its strength. We analyse entropy, crack time, character variety, and patterns — all in real time. Your password never leaves your device.</p>
+
+  <div class="gc" role="main" aria-label="Password strength checker">
+    <div class="pdsp">
+      <input type="password" id="pw" placeholder="Type a password to check..." autocomplete="off" spellcheck="false" oninput="analyse()">
+      <button class="cpb" id="tgb" onclick="togglePW()" aria-label="Show or hide password"
+        style="background:var(--a);color:#fff;border:none;padding:10px 18px;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit;flex-shrink:0">👁️</button>
+    </div>
+
+    <div class="tih">
+      <div class="tib" id="tscore" style="background:var(--bga);border:1px solid var(--bd)">
+        <span class="tv" id="scv" style="font-size:2.2rem;font-weight:800;color:var(--t3)">—</span>
+        <span style="color:var(--t3)">Strength</span>
+      </div>
+      <div class="tib" style="background:var(--bga);border:1px solid var(--bd)">
+        <span class="tv" id="ctv" style="color:var(--t3)">—</span>
+        <span style="color:var(--t3)">Crack Time</span>
+      </div>
+      <div class="tib" style="background:var(--bga);border:1px solid var(--bd)">
+        <span class="tv" id="lgtv" style="color:var(--t3)">—</span>
+        <span style="color:var(--t3)">Length</span>
+      </div>
+      <div class="tib" style="background:var(--bga);border:1px solid var(--bd)">
+        <span class="tv" id="etv" style="color:var(--t3)">—</span>
+        <span style="color:var(--t3)">Entropy</span>
+      </div>
+    </div>
+
+    <div class="ss">
+      <div class="sh">
+        <span class="sl">Strength Score</span>
+        <span class="sv" id="svl" style="color:var(--t3)">—</span>
+      </div>
+      <div class="sbt" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Password strength indicator">
+        <div class="sbf" id="sbf"></div>
+      </div>
+    </div>
+
+    <div class="sg">
+      <div class="sp"><div class="v" id="chv">—</div><div class="l">Character Types</div></div>
+      <div class="sp"><div class="v" id="pav">—</div><div class="l">Pattern Detection</div></div>
+      <div class="sp"><div class="v" id="stv">—</div><div class="l">Uniqueness</div></div>
+    </div>
+
+    <div class="tips" id="tips">
+      <h3>🔧 How to improve this password</h3>
+      <ul id="tipslist"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <h2>How Password Strength Is Measured</h2>
+  <div class="slim">
+    <p style="text-align:center;color:var(--t2);margin-bottom:28px;font-size:1.05rem">We evaluate four key factors that determine how resistant a password is to cracking attempts.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+      <div style="background:var(--card);border:1px solid var(--bd);border-radius:var(--rad);padding:22px;box-shadow:var(--sh)">
+        <div style="font-size:28px;margin-bottom:6px">🔢</div>
+        <h3 style="font-size:15px;font-weight:700;color:var(--p);margin-bottom:6px">Entropy (Bits)</h3>
+        <p style="font-size:13px;color:var(--t2);line-height:1.7">Each character adds log₂(pool size) bits of entropy. 80+ bits is considered uncrackable by current standards. A 16-character password with all types ≈ 105 bits.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--bd);border-radius:var(--rad);padding:22px;box-shadow:var(--sh)">
+        <div style="font-size:28px;margin-bottom:6px">⏱️</div>
+        <h3 style="font-size:15px;font-weight:700;color:var(--p);margin-bottom:6px">Crack Time</h3>
+        <p style="font-size:13px;color:var(--t2);line-height:1.7">Estimated time to brute-force at 1 trillion guesses/second (realistic for modern GPUs). Strong passwords are measured in centuries or millennia.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--bd);border-radius:var(--rad);padding:22px;box-shadow:var(--sh)">
+        <div style="font-size:28px;margin-bottom:6px">🎯</div>
+        <h3 style="font-size:15px;font-weight:700;color:var(--p);margin-bottom:6px">Character Variety</h3>
+        <p style="font-size:13px;color:var(--t2);line-height:1.7">Using lowercase, uppercase, numbers, and symbols exponentially increases the search space. Each added type multiplies cracking difficulty.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--bd);border-radius:var(--rad);padding:22px;box-shadow:var(--sh)">
+        <div style="font-size:28px;margin-bottom:6px">🚫</div>
+        <h3 style="font-size:15px;font-weight:700;color:var(--p);margin-bottom:6px">Pattern Detection</h3>
+        <p style="font-size:13px;color:var(--t2);line-height:1.7">Common passwords, dictionary words, sequential characters (abc, 123), and repeated patterns are flagged. Hackers try these first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON PASSWORD TIPS -->
+<section style="background:var(--bga)">
+  <h2>How to Create a Strong Password</h2>
+  <div class="slim">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+      <div style="background:var(--card);border-radius:var(--rad);padding:20px;text-align:center;box-shadow:var(--sh)">
+        <div style="font-size:32px;margin-bottom:8px">🔤</div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--p);margin-bottom:4px">12+ Characters</h3>
+        <p style="font-size:12px;color:var(--t2);line-height:1.6">Length is the single most important factor. Each extra character multiplies difficulty exponentially.</p>
+      </div>
+      <div style="background:var(--card);border-radius:var(--rad);padding:20px;text-align:center;box-shadow:var(--sh)">
+        <div style="font-size:32px;margin-bottom:8px">🎲</div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--p);margin-bottom:4px">Mix Character Types</h3>
+        <p style="font-size:12px;color:var(--t2);line-height:1.6">Combine uppercase, lowercase, numbers, and symbols. Each type dramatically expands the search space.</p>
+      </div>
+      <div style="background:var(--card);border-radius:var(--rad);padding:20px;text-align:center;box-shadow:var(--sh)">
+        <div style="font-size:32px;margin-bottom:8px">🔄</div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--p);margin-bottom:4px">Never Reuse</h3>
+        <p style="font-size:12px;color:var(--t2);line-height:1.6">Use a unique password for every account. Breach one, lose them all — unless they're all different.</p>
+      </div>
+    </div>
+    <div style="margin-top:22px;text-align:center">
+      <p style="font-size:13px;color:var(--t2)">Need a strong password? Try our <a href="/">free password generator</a> — creates cryptographically secure passwords instantly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="fq">
+      <button class="fqt" onclick="this.parentElement.classList.toggle('op')">
+        What is a good password strength score?
+        <span class="fqar">▲</span>
+      </button>
+      <div class="fqa">A score of 80+ out of 100 is considered strong. This corresponds to approximately 80+ bits of entropy — enough to resist brute-force attacks for thousands of years. Scores below 40 indicate weak passwords that can be cracked in seconds or minutes. Our tool uses a comprehensive algorithm that evaluates length, character variety, common patterns, and known weak passwords.</div>
+    </div>
+    <div class="fq">
+      <button class="fqt" onclick="this.parentElement.classList.toggle('op')">
+        Does this tool store or send my password?
+        <span class="fqar">▲</span>
+      </button>
+      <div class="fqa">No — absolutely not. The entire analysis runs in your browser using JavaScript. Your password never leaves your device, is never transmitted over the network, and is never stored. This is the same architecture as our <a href="/">main password generator</a>. For maximum security, you can even use this tool offline after the page loads.</div>
+    </div>
+    <div class="fq">
+      <button class="fqt" onclick="this.parentElement.classList.toggle('op')">
+        What does "crack time" actually mean?
+        <span class="fqar">▲</span>
+      </button>
+      <div class="fqa">Crack time is the estimated time it would take a powerful computer to guess your password through brute force. We assume 1 trillion guesses per second — realistic for a modern GPU cluster. Real-world attackers often combine dictionary attacks, common patterns, and known breaches, which can crack weak passwords much faster. The crack time shown assumes the attacker has no prior knowledge about your password.</div>
+    </div>
+    <div class="fq">
+      <button class="fqt" onclick="this.parentElement.classList.toggle('op')">
+        Is 12 characters long enough for a password?
+        <span class="fqar">▲</span>
+      </button>
+      <div class="fqa">12 characters is considered the <strong>minimum</strong> for a reasonably secure password. A 12-character password with all character types provides roughly 72 bits of entropy and would take hundreds of years to brute-force. However, we recommend 16+ characters for critical accounts (email, banking, password manager). Many organisations now mandate 14+ characters as standard policy.</div>
+    </div>
+    <div class="fq">
+      <button class="fqt" onclick="this.parentElement.classList.toggle('op')">
+        What's the difference between this and a password generator?
+        <span class="fqar">▲</span>
+      </button>
+      <div class="fqa">This tool <strong>analyses</strong> existing passwords — it tells you how strong a password is and how to improve it. A <a href="/">password generator</a> <strong>creates</strong> new strong passwords instantly. Many people use a generator to create a password, then check it here to understand why it's strong. For best results, use both: generate a 16+ character password with our generator, then verify it here.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <div class="fb">
+      <div class="fbn">Best<span>Password</span></div>
+      <p>Free, cryptographically secure password generation and strength checking for everyone. No data stored. No registration. No cost. Always.</p>
+      <p class="fbe">📧 <a href="mailto:hello@bestpasswordgenerator.org">hello@bestpasswordgenerator.org</a></p>
+    </div>
+    <div class="fc">
+      <h4>Tools</h4>
+      <a href="/">Password Generator</a>
+      <a href="/tools/password-strength-checker/">Strength Checker</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <div class="fc">
+      <h4>Resources</h4>
+      <a href="/blog.html">Security Blog</a>
+      <a href="/blog/how-to-create-strong-passwords-2026.html">Password Guides</a>
+      <a href="/blog/password-breach-statistics-2026.html">Statistics</a>
+      <a href="/blog.html">Security News</a>
+    </div>
+    <div class="fc">
+      <h4>Legal</h4>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/cookie-policy.html">Cookie Policy</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="/contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <a href="/privacy-policy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/affiliate-disclosure.html">Affiliates</a> · <a href="/cookie-policy.html">Cookies</a>
+    <br>© 2026 BestPasswordGenerator.org. All rights reserved.
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ── Common password dictionary (top 200) ──
+  const COMMON = new Set([
+    "password","123456","12345678","qwerty","abc123","monkey","123456789","letmein","dragon",
+    "111111","baseball","iloveyou","trustno1","sunshine","master","welcome","shadow",
+    "ashley","football","jesus","michael","ninja","mustang","password1","admin",
+    "p@ssw0rd","passw0rd","1234","12345","qwerty123","changeme","secret","password123",
+    "test","guest","pass","passwd","123qwe","qwerty12345","qwerty1","1q2w3e4r",
+    "qwertyuiop","asdfghjkl","zxcvbnm","!@#$%^&*","aa123456","abc123456",
+    "1234567890","abc12345","admin123","pass123","pass1234","pass12345",
+    "iloveyou123","loveme","lovely","princess","soccer","hockey","charlie",
+    "thomas","george","andrew","joshua","matthew","daniel","william","joseph",
+    "12345678910","superman","batman","starwars","harrypotter","ironman",
+    "spiderman","whatever","nothing","anything","something","hello","world",
+    "helloworld","qwerty123456","1q2w3e","qwerty12345","11111111","000000",
+    "121212","131313","112233","123123","123321","654321","555555","666666",
+    "777777","888888","999999","123456789a","qwerty123456789","a123456","a123456789",
+    "zaq1xsw2","1qaz2wsx","qazwsx","qweasd","zaqxsw","cde3","vfr4","123qweasd",
+    "passwd1","password123456","pass123456","abc123456789","1111111111",
+    "222222","333333","444444","passw0rd1","pa$$word","p@ssword","p@$$w0rd",
+    "123456asd","qwerty1234567890","adminadmin","letmein123","welcome123",
+    "summer2024","summer2025","winter2024","winter2025","spring2024","fall2024",
+    "Password","Password1","Password123","Admin1","Admin123","Welcome1",
+    "Welcome123","Changeme1","P@ssw0rd!","Summer2024","Summer2025",
+    "January","February","March","April","May","June","July","August",
+    "September","October","November","December","password.","password!",
+    "Passw0rd","Pass1234","1Password","mypassword","mypass","root","toor",
+    "system","manager","server","oracle","mysql","postgres","ubuntu","debian",
+    "centos","redhat","fedora","archlinux","gentoo","slackware","kali",
+    "hacker","crack","exploit","security","default","temp","temporary",
+    "newpass","oldpass","backup","guest123","demo","test123","testing",
+    "sample","example","abcdef","abcdefg","abcdefgh","aaaaaa","bbbbbb",
+    "cccccc","dddddd","eeeeee","ffffff","abcabc","cba123","123abc","abc321",
+    "1a2b3c","a1b2c3","letme","please","nopass","nopassword","unknown",
+    "internet","intranet","web","website","page","home","homepage",
+    "computer","laptop","desktop","macbook","windows","microsoft","apple",
+    "google","facebook","twitter","instagram","snapchat","tiktok","youtube",
+    "netflix","amazon","ebay","paypal","github","gitlab","bitbucket",
+    "stackoverflow","reddit","discord","telegram","whatsapp","signal",
+    "hunter","hunter2","ranger","warrior","knight","samurai","ninja1",
+    "freedom","liberty","justice","equality","democracy","america","britain",
+    "canada","australia","europe","asia","china","japan","korea","india",
+    "london","paris","newyork","tokyo","berlin","moscow","rome","madrid",
+    "football1","soccer1","hockey1","baseball1","basketball","tennis","golf",
+    "cricket","rugby","swimming","running","fitness","health","wellness",
+    "yellow","purple","orange","green","blue","red","black","white","silver",
+    "golden","bronze","platinum","diamond","crystal","ruby","emerald","sapphire",
+    "amethyst","topaz","opal","pearl","jade","onyx","coral","ivory"
+  ]);
+
+  // ── Sequential patterns ──
+  function hasSequential(s) {
+    const seq = ["abcdefghijklmnopqrstuvwxyz","0123456789","qwertyuiop","asdfghjkl","zxcvbnm"];
+    const lower = s.toLowerCase();
+    for (let i = 0; i < lower.length - 2; i++) {
+      const chunk = lower.substring(i, i + 4);
+      for (const pat of seq) {
+        if (pat.includes(chunk)) return true;
+        if (pat.split('').reverse().join('').includes(chunk)) return true;
+      }
+    }
+    return false;
+  }
+
+  // ── Repeated patterns ──
+  function hasRepeated(s) {
+    return /(.)\1{2,}/.test(s);
+  }
+
+  // ── Keyboard walks ──
+  function hasKeyboardWalk(s) {
+    const rows = ["qwertyuiop","asdfghjkl","zxcvbnm"];
+    const lower = s.toLowerCase();
+    for (const row of rows) {
+      for (let i = 0; i < lower.length - 2; i++) {
+        const chunk = lower.substring(i, i + 3);
+        if (row.includes(chunk)) return true;
+      }
+    }
+    return false;
+  }
+
+  // ── Main analysis ──
+  window.analyse = function () {
+    const pw = document.getElementById('pw').value;
+    const len = pw.length;
+
+    const hasUpper = /[A-Z]/.test(pw);
+    const hasLower = /[a-z]/.test(pw);
+    const hasNum = /[0-9]/.test(pw);
+    const hasSym = /[^A-Za-z0-9]/.test(pw);
+
+    // Pool size
+    let pool = 0;
+    if (hasLower) pool += 26;
+    if (hasUpper) pool += 26;
+    if (hasNum) pool += 10;
+    if (hasSym) pool += 32;
+    if (pool === 0) pool = 26; // assume lowercase if empty
+
+    // Entropy
+    const entropy = len > 0 ? len * (Math.log2(pool)) : 0;
+
+    // Pattern penalties
+    let deductions = 0;
+    const patterns = [];
+
+    if (hasSequential(pw)) { deductions += 15; patterns.push("Sequential characters"); }
+    if (hasRepeated(pw)) { deductions += 10; patterns.push("Repeated characters"); }
+    if (hasKeyboardWalk(pw)) { deductions += 10; patterns.push("Keyboard pattern"); }
+    if (len < 8) deductions += 25;
+    if (len < 6) deductions += 40;
+    if (COMMON.has(pw.toLowerCase())) { deductions += 35; patterns.push("Commonly used password"); }
+
+    // Score
+    let rawScore = len > 0 ? (entropy / 1.2) : 0;
+    if (rawScore > 100) rawScore = 100;
+    let score = Math.max(0, Math.round(rawScore - deductions));
+    if (len === 0) score = 0;
+
+    // Strength label
+    let label, color, barColor;
+    if (len === 0) { label = "—"; color = "var(--t3)"; barColor = "var(--bd)"; score = 0; }
+    else if (score >= 80) { label = "Very Strong"; color = "#059669"; barColor = "var(--g)"; }
+    else if (score >= 60) { label = "Strong"; color = "#059669"; barColor = "var(--g)"; }
+    else if (score >= 40) { label = "Moderate"; color = "#d97706"; barColor = "var(--am)"; }
+    else if (score >= 20) { label = "Weak"; color = "#dc2626"; barColor = "var(--r)"; }
+    else { label = "Very Weak"; color = "#dc2626"; barColor = "var(--r)"; }
+
+    // Crack time
+    let crackTime;
+    const guessSpeed = 1000000000000; // 1 trillion/sec
+    const combos = Math.pow(pool, len);
+    const seconds = combos / guessSpeed;
+    if (len === 0) crackTime = "—";
+    else if (seconds < 1) crackTime = "Instantly";
+    else if (seconds < 60) crackTime = Math.ceil(seconds) + " seconds";
+    else if (seconds < 3600) crackTime = Math.ceil(seconds / 60) + " minutes";
+    else if (seconds < 86400) crackTime = Math.ceil(seconds / 3600) + " hours";
+    else if (seconds < 31536000) crackTime = Math.ceil(seconds / 86400) + " days";
+    else if (seconds < 315360000) crackTime = Math.ceil(seconds / 31536000) + " years";
+    else crackTime = "Centuries";
+
+    // Character types display
+    const types = [];
+    if (hasLower) types.push("Lowercase");
+    if (hasUpper) types.push("Uppercase");
+    if (hasNum) types.push("Numbers");
+    if (hasSym) types.push("Symbols");
+    const typeStr = len > 0 ? (types.length + "/4 types") : "—";
+    const typeDetail = len > 0 ? types.join(", ") : "";
+
+    // Pattern detection
+    const patStr = len > 0 ? (patterns.length > 0 ? patterns.join(", ") : "No suspicious patterns") : "—";
+
+    // Uniqueness
+    const isCommon = len > 0 && COMMON.has(pw.toLowerCase());
+    const uniqStr = len > 0 ? (isCommon ? "⚠️ Common password" : "✅ Unique password") : "—";
+
+    // ── Update DOM ──
+    document.getElementById('scv').textContent = len > 0 ? score : "—";
+    document.getElementById('scv').style.color = color;
+    document.getElementById('tscore').style.borderColor = barColor;
+
+    // Crack time tile
+    document.getElementById('ctv').textContent = crackTime;
+    document.getElementById('ctv').style.color = color;
+
+    // Length tile
+    document.getElementById('lgtv').textContent = len > 0 ? len + " chars" : "—";
+    document.getElementById('lgtv').style.color = len > 0 ? "var(--p)" : "var(--t3)";
+
+    // Entropy tile
+    document.getElementById('etv').textContent = len > 0 ? Math.round(entropy) + " bits" : "—";
+    document.getElementById('etv').style.color = len > 0 ? "var(--p)" : "var(--t3)";
+
+    // Score bar
+    document.getElementById('svl').textContent = len > 0 ? label : "—";
+    document.getElementById('svl').style.color = len > 0 ? color : "var(--t3)";
+    const bar = document.getElementById('sbf');
+    bar.style.width = len > 0 ? score + "%" : "0%";
+    bar.style.background = barColor;
+
+    // Metrics grid
+    document.getElementById('chv').textContent = typeStr;
+    document.getElementById('chv').title = typeDetail;
+    document.getElementById('pav').textContent = patStr.length > 20 ? patStr.substring(0, 20) + "…" : patStr;
+    document.getElementById('pav').title = patStr;
+    document.getElementById('stv').textContent = uniqStr;
+
+    // Tips
+    const tips = document.getElementById('tips');
+    const tipsList = document.getElementById('tipslist');
+    tipsList.innerHTML = '';
+    if (len > 0 && score < 80) {
+      tips.style.display = 'block';
+      if (len < 8) addTip("Make it longer — aim for 12+ characters minimum");
+      else if (len < 12) addTip("Increase to 12-16 characters for better security");
+      if (!hasLower || !hasUpper) addTip("Mix uppercase and lowercase letters");
+      if (!hasNum) addTip("Add numbers to increase entropy");
+      if (!hasSym) addTip("Include symbols like !@#$% for maximum strength");
+      if (isCommon) addTip("This is a widely used password — avoid using it");
+      if (hasSequential(pw)) addTip("Avoid sequential characters like 'abc' or '123'");
+      if (hasRepeated(pw)) addTip("Avoid repeating the same character (e.g. 'aaa')");
+      if (hasKeyboardWalk(pw)) addTip("Avoid keyboard patterns like 'qwerty'");
+      if (len >= 8 && types.length < 2) addTip("Use at least 2 character types");
+    } else if (len > 0) {
+      tips.style.display = 'none';
+    } else {
+      tips.style.display = 'none';
+    }
+  };
+
+  function addTip(msg) {
+    const li = document.createElement('li');
+    li.textContent = msg;
+    document.getElementById('tipslist').appendChild(li);
+  }
+
+  // ── Toggle password visibility ──
+  window.togglePW = function () {
+    const pw = document.getElementById('pw');
+    const btn = document.getElementById('tgb');
+    if (pw.type === 'password') {
+      pw.type = 'text';
+      btn.textContent = '🙈';
+    } else {
+      pw.type = 'password';
+      btn.textContent = '👁️';
+    }
+  };
+})();
+</script>
+
+<!-- Google Analytics / privacy-friendly analytics here if desired -->
+</body>
+</html>
