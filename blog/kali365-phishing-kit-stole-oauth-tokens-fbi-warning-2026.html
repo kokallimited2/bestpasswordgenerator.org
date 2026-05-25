@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kali365 Phishing Kit Steals OAuth Tokens — FBI Warning</title>
+<meta name="description" content="FBI warns Kali365 phishing kit steals Microsoft OAuth tokens at scale, bypassing MFA entirely. Learn how device code phishing works and how to protect your">
+<link rel="canonical" href="https://bestpasswordgenerator.org/blog/kali365-phishing-kit-stole-oauth-tokens-fbi-warning-2026.html">
+<base href="/">
+<meta property="og:title" content="Kali365 Phishing Kit Steals OAuth Tokens — FBI Warning">
+<meta property="og:description" content="FBI warns Kali365 phishing kit steals Microsoft OAuth tokens at scale, bypassing MFA entirely. Learn how device code phishing works and how to protect your">
+<meta property="og:url" content="https://bestpasswordgenerator.org/blog/kali365-phishing-kit-stole-oauth-tokens-fbi-warning-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://bestpasswordgenerator.org/og-image.png">
+<meta property="article:published_time" content="2026-05-25">
+<meta property="article:author" content="Security Research Team">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kali365 Phishing Kit Steals OAuth Tokens — FBI Warning">
+<meta name="twitter:description" content="FBI warns Kali365 phishing kit steals Microsoft OAuth tokens at scale, bypassing MFA entirely. Learn how device code phishing works and how to protect your">
+<meta name="twitter:image" content="https://bestpasswordgenerator.org/og-image.png">
+<meta property="article:modified_time" content="2026-05-25">
+<meta property="article:section" content="Threat Intelligence">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bestpasswordgenerator.org/#organization",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "sameAs": [
+        "https://twitter.com/"
+      ],
+      "knowsAbout": [
+        "password security",
+        "cybersecurity"
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bestpasswordgenerator.org/#website",
+      "url": "https://bestpasswordgenerator.org/",
+      "name": "BestPasswordGenerator.org",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bestpasswordgenerator.org/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://bestpasswordgenerator.org/#webapp",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://bestpasswordgenerator.org/#webapi",
+      "name": "BestPasswordGenerator.org API",
+      "url": "https://bestpasswordgenerator.org/",
+      "description": "Generate secure passwords programmatically",
+      "potentialAction": [
+        {
+          "@type": "GenerateAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bestpasswordgenerator.org/?length=16&count=1"
+          }
+        }
+      ],
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bestpasswordgenerator.org/#author",
+      "name": "Security Research Team",
+      "jobTitle": "Cybersecurity Researcher",
+      "url": "https://bestpasswordgenerator.org/about.html",
+      "sameAs": [
+        "https://bestpasswordgenerator.org/about.html"
+      ],
+      "knowsAbout": [
+        "password security",
+        "NIST guidelines",
+        "cryptography",
+        "cybersecurity"
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://bestpasswordgenerator.org/blog/kali365-phishing-kit-stole-oauth-tokens-fbi-warning-2026.html#article",
+      "headline": "Kali365 Phishing Kit Steals OAuth Tokens — FBI Warning",
+      "description": "FBI warns Kali365 phishing kit steals Microsoft OAuth tokens at scale, bypassing MFA entirely. Learn how device code phishing works and how to protect your",
+      "image": "https://bestpasswordgenerator.org/og-image.png",
+      "author": {
+        "@id": "https://bestpasswordgenerator.org/#author"
+      },
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://bestpasswordgenerator.org/#website"
+      },
+      "datePublished": "2026-05-25",
+      "dateModified": "2026-05-25",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://bestpasswordgenerator.org/blog/kali365-phishing-kit-stole-oauth-tokens-fbi-warning-2026.html"
+      },
+      "wordCount": "1875",
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".callout"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://bestpasswordgenerator.org/blog/kali365-phishing-kit-stole-oauth-tokens-fbi-warning-2026.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bestpasswordgenerator.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://bestpasswordgenerator.org/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kali365 Phishing Kit Steals OAuth Tokens — FBI Warning",
+          "item": "https://bestpasswordgenerator.org/blog/kali365-phishing-kit-stole-oauth-tokens-fbi-warning-2026.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Kali365 steal passwords too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kali365's primary mechanism is OAuth token theft, not password theft. However, once an attacker has access to a compromised account, they can enumerate the victim's saved credentials, email archives, and internal systems — which may contain passwords"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Microsoft MFA stop Kali365?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Kali365's device code phishing technique is specifically designed to bypass MFA. The device code authentication flow does not trigger Microsoft's MFA challenge because it is designed for scenarios where interactive authentication is not possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly should organisations respond to the FBI warning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Immediately. The FBI's PSA on Kali365 was issued on May 21, 2026, and Microsoft has confirmed that hundreds of organisations are compromised daily through device code phishing. Every day without conditional access policies blocking device code flows "
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Kali365 the same as EvilTokens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, but they are similar. Kali365 and EvilTokens are separate phishing-as-a-service platforms that both exploit device code authentication. EvilTokens was identified weeks before Kali365. Both platforms have triggered public warnings from the FBI and"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a password manager help against OAuth token theft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indirectly, yes. While a password manager cannot prevent OAuth token theft (the attacker never needs your password), it helps by generating unique, strong passwords for every account. Combined with phishing-resistant MFA like FIDO2 passkeys, it creat"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#0d2137;--pl:#1a365d;--a:#2563eb;--al:#3b82f6;--t:#1a202c;--t2:#4a5568;--t3:#718096;--s1:#f7fafc;--s2:#e2e8f0;--w:#fff;--b:#e53e3e;--g:#38a169}
+body{font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;background:var(--w);color:var(--t);line-height:1.7}
+nav{background:var(--p);padding:12px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+nav .logo{color:#fff;font-weight:900;font-size:20px;text-decoration:none}
+nav a{color:rgba(255,255,255,0.8);font-size:14px;text-decoration:none;margin-left:18px;transition:.2s}
+nav a:hover,nav a.cur{color:#fff}
+.post-container{max-width:800px;margin:0 auto;padding:36px 22px 60px}
+.tag{display:inline-block;background:var(--p);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+.breadcrumb{margin-bottom:18px;font-size:13px;color:var(--t3)}
+.breadcrumb a{color:var(--a);text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+h1{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;color:var(--t);line-height:1.3;max-width:700px;margin:0 auto 8px;text-align:center}
+.meta{font-size:13px;color:var(--t3);text-align:center;margin-bottom:28px}
+.callout{background:#fffbeb;border-left:4px solid var(--b);padding:16px 20px;margin:24px 0;border-radius:4px;font-size:15px}
+h2{font-size:clamp(1.2rem,2.5vw,1.5rem);font-weight:800;color:var(--t);margin:40px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--s2)}
+h2:first-of-type{margin-top:0}
+h3{font-size:clamp(1.05rem,2vw,1.2rem);font-weight:700;color:var(--t);margin:28px 0 10px}
+p,li{font-size:16px;line-height:1.8;color:var(--t2);margin:0 0 16px}
+li{margin-bottom:6px}
+ul,ol{padding-left:24px;margin:0 0 20px}
+a{color:var(--a);text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--s1);padding:2px 6px;border-radius:3px;font-size:14px;border:1px solid var(--s2)}
+.bcta{display:inline-block;background:linear-gradient(135deg,var(--p),var(--pl),#1e40af);color:#fff;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;margin:32px 0 0;transition:.2s}
+.bcta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,0.3);text-decoration:none}
+footer{background:var(--p);color:rgba(255,255,255,0.7);padding:32px 22px;text-align:center;font-size:13px;line-height:1.8;margin-top:48px}
+footer a{color:rgba(255,255,255,0.8);text-decoration:none;margin:0 6px}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.rpost{background:var(--s1);padding:16px;border-radius:8px;border:1px solid var(--s2);transition:.2s}
+.rpost:hover{border-color:var(--a);box-shadow:0 2px 8px rgba(37,99,235,0.1)}
+.rtag{display:inline-block;background:var(--a);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase}
+@media(max-width:600px){.post-container{padding:24px 16px 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">&#x1f511; BestPasswordGenerator</a>
+  <div>
+    <a href="/">Generator</a>
+<a href="/blog.html" class="cur">Blog</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <div class="post-container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> &#8250; <a href="/blog.html">Blog</a> &#8250;
+      <span>Kali365 Phishing Kit Steals OAuth Tokens — FBI Warning</span>
+    </div>
+
+    <div style="text-align:center;margin-bottom:28px">
+      <div class="tag" style="margin-bottom:8px">Threat Intelligence</div>
+      <h1>🛡️ Kali365 Phishing Kit Steals OAuth Tokens — FBI Warning</h1>
+      <div class="meta">By <strong>Security Research Team</strong>, BestPasswordGenerator.org &middot; 25 May 2026 &middot; 9 min read &middot; 1,875 words</div>
+    </div>
+
+<div class="toc" style="background:var(--s1);border-radius:12px;padding:20px 24px;margin-bottom:32px;border:1px solid var(--s2)"><h3 style="margin:0 0 8px;font-size:14px;color:var(--t2)">On this page</h3><ul style="margin:0;padding-left:18px;font-size:14px;line-height:2"><li><a href="#what-is-kali365-and-how-does-it-work">What Is Kali365 and How Does It Work?</a></li>
+<li><a href="#why-this-is-worse-than-traditional-phishing">Why This Is Worse Than Traditional Phishing</a></li>
+<li><a href="#who-is-at-risk">Who Is at Risk?</a></li>
+<li><a href="#how-to-protect-your-organisation-from-kali365">How to Protect Your Organisation from Kali365</a></li>
+<li><a href="#kali365-in-context-the-token-theft-ecosystem">Kali365 in Context: The Token Theft Ecosystem</a></li>
+<li><a href="#faqs-about-kali365-and-oauth-token-theft">FAQs About Kali365 and OAuth Token Theft</a></li>
+</ul></div>
+
+<p>The FBI issued a public service announcement warning that the <strong>Kali365 phishing kit is stealing Microsoft OAuth tokens at an alarming rate</strong> — bypassing multi-factor authentication (MFA) entirely. If your organisation uses Microsoft 365, your employees' accounts could be compromised without anyone typing a password.</p>
+
+<p>Here is the short version: Kali365 is a phishing-as-a-service platform sold on Telegram for $250 per month per tenant. It sends convincing emails pretending to be from Adobe Acrobat Sign, DocuSign, or SharePoint. When a victim follows the instructions, the attacker's device gets linked to the victim's M365 account — giving them full access to emails, Teams, files, and internal systems without ever needing a password or MFA code.</p>
+
+<p>In our analysis of the FBI advisory, Arctic Wolf's deep dive, and the wider device code phishing ecosystem, we found that Kali365 represents a dangerous escalation in the phishing-as-a-service market. Microsoft has confirmed hundreds of compromises occur daily from device code phishing alone. This article explains exactly how Kali365 works, why it bypasses traditional defences, and what you need to do right now to protect your accounts.</p>
+
+<h2 id="what-is-kali365-and-how-does-it-work">What Is Kali365 and How Does It Work?</h2>
+
+<p>Kali365 is a phishing kit that security researchers at Arctic Wolf first identified in April 2026. The FBI issued its formal warning on May 21, 2026, confirming that the platform has been stealing OAuth tokens at industrial scale since its emergence. OAuth tokens are the digital keys that authenticate users to applications without requiring repeated password entry. When an attacker steals your OAuth token, they effectively borrow your authenticated session — they can read your emails, send messages as you, access your files, and escalate privileges within your organisation — all while your MFA remains untouched.</p>
+
+<h3>Device Code Phishing: The Primary Attack Vector</h3>
+
+<p>The FBI's PSA specifically calls out Kali365's device code phishing capabilities. Here is how the attack unfolds:</p>
+
+<ol>
+<li>The attacker sends a phishing email impersonating a trusted service like DocuSign, Adobe Acrobat Sign, or SharePoint. The email looks legitimate — professional branding, correct grammar, matched domain aesthetics — because Kali365 uses AI-generated lures.</li>
+<li>The email contains a device code and instructions to enter it on a legitimate Microsoft login page. A link to the real Microsoft device login page is included, so victims are not taken to a fake site.</li>
+<li>The victim follows the instructions and enters the code on the official Microsoft device login page. From their perspective, they are just authorising a legitimate document access request.</li>
+<li>Entering that code registers the attacker's device to the victim's M365 account. The attacker now has a valid, authenticated session — with full access to the victim's emails, Teams, SharePoint, and any other Microsoft service the account can reach.</li>
+<li><strong>MFA never triggers.</strong> Device code flows are designed for scenarios where the user cannot complete interactive authentication (e.g., a smart TV or printer). Microsoft's own device login page does not challenge the user with MFA during device code entry.</li>
+</ol>
+
+<p>Arctic Wolf's researchers documented the mechanics in their April 2026 deep dive, noting that Kali365 also offers adversary-in-the-middle (AitM) capabilities that achieve the same result through a different mechanism. In the AitM variant, victims are proxied through attacker-controlled infrastructure while authenticating at a real Microsoft login page, allowing attackers to scoop up session cookies and replay them in their own browsers. Both attack paths share the same devastating outcome: <strong>complete account takeover without password or MFA compromise</strong>.</p>
+
+<h3>Kali365 Subscription Tiers</h3>
+
+<p>The platform's pricing and tier structure reveals a sophisticated criminal operation designed for scale. Arctic Wolf's analysis identified three subscriber tiers:</p>
+
+<ul>
+<li><strong>Client Tier ($250/month):</strong> Individual attackers who can deploy branded phishing panels with customised lures. Each panel has a bespoke look while sharing the same underlying attack infrastructure.</li>
+<li><strong>Agent Tier (Reseller):</strong> Middlemen who provision and manage their own branded Kali365 panels and Client Tier subscriptions. This tier effectively franchises the phishing operation, letting resellers recruit their own attackers.</li>
+<li><strong>Admin Tier:</strong> Kali365's original developers who maintain the platform and collect revenue from all tiers.</li>
+</ul>
+
+<p>The platform supports 14 languages — Arabic, Chinese, Dutch, English, French, German, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, and Turkish — enabling global targeting across every region. Microsoft's VP of security research, Tanmay Ganacharya, told The Register that each campaign targets hundreds of organisations with highly varied payloads, making pattern-based detection significantly harder.</p>
+
+<h2 id="why-this-is-worse-than-traditional-phishing">Why This Is Worse Than Traditional Phishing</h2>
+
+<p>Traditional phishing requires the attacker to collect a password. Even if successful, <a href="/blog/mfa-guide-2026.html">multi-factor authentication</a> often stops the attacker at the login screen. Kali365 bypasses both entirely. The attacker never asks for your password — they ask you to authorise a device on Microsoft's own login page. From a user's perspective, they are doing something that looks completely normal: entering a code to access or share a document.</p>
+
+<p>Kali365 joins a growing ecosystem of so-called token theft platforms. EvilTokens, a similar device code phishing platform that emerged weeks before Kali365, has already been linked to hundreds of daily compromises. The FBI's PSA on Kali365 suggests law enforcement is treating this as an escalating threat that requires urgent defensive action.</p>
+
+<p>To make matters worse, the stolen OAuth tokens are often usable long after the initial compromise. Microsoft has confirmed that tokens can remain valid for hours or days depending on the token type and tenant policies. During that window, attackers can quietly explore the compromised account, search for privileged data, and establish persistence through secondary mechanisms like forwarding rules or delegated access.</p>
+
+<p>For beginners building their first security routine, <a href="https://freestrongpassword.com/" target="_blank" rel="nofollow noopener">freestrongpassword.com</a> offers entry-level guidance on protecting accounts from common threats like phishing.</p>
+
+<h2 id="who-is-at-risk">Who Is at Risk?</h2>
+
+<p>The Kali365 phishing kit targets anyone with a Microsoft 365 account — and that includes millions of businesses, schools, government agencies, and non-profits worldwide. The FBI's announcement specifically warns organisations in sectors with high-value data:</p>
+
+<ul>
+<li><strong>Enterprise businesses</strong> — corporate espionage, data theft, wire fraud</li>
+<li><strong>Healthcare organisations</strong> — patient records, HIPAA-regulated data</li>
+<li><strong>Educational institutions</strong> — student data, research intellectual property</li>
+<li><strong>Government agencies</strong> — classified communications, citizen data</li>
+<li><strong>Financial services</strong> — transaction access, customer PII</li>
+</ul>
+
+<p>Enterprise environments are particularly vulnerable because M365 tenants often contain thousands of users with varying security awareness. A single compromised OAuth token in a privileged account — like a global admin or a finance executive — can cascade into a full tenant takeover. Privacy-focused users and organisations may prefer the approach detailed at <a href="https://securekeygenerator.com/" target="_blank" rel="nofollow noopener">securekeygenerator.com</a>, which emphasises offline-capable security tools and minimal attack surface.</p>
+
+<h2 id="how-to-protect-your-organisation-from-kali365">How to Protect Your Organisation from Kali365</h2>
+
+<p>The FBI and Arctic Wolf recommend several defensive measures. We have prioritised them by impact:</p>
+
+<ol>
+<li><strong>Block device code authentication flow</strong> — Configure conditional access policies in Microsoft Entra ID to block device code flows where they are not explicitly required. This is the single most effective control.</li>
+<li><strong>Block authentication transfer policies</strong> — Prevent users from moving authentication between devices, which device code phishing exploits.</li>
+<li><strong>Enable token protection policies</strong> — Microsoft now supports token binding features that tie tokens to specific devices, making stolen tokens unusable on attacker machines.</li>
+<li><strong>Deploy phishing-resistant MFA</strong> — FIDO2 security keys and passkeys (WebAuthn) are not vulnerable to token theft attacks because they require physical presence for authentication.</li>
+<li><strong>Train users to recognise device code requests</strong> — Users should be told: never enter a device code sent to you via email or chat. Device codes are for appliances, not people.</li>
+<li><strong>Monitor for suspicious OAuth applications</strong> — Regularly audit granted OAuth permissions and revoke any unrecognised or overly permissive apps.</li>
+</ol>
+
+<p>Organisations handling sensitive data may benefit from the <a href="https://titanpasswords.com/" target="_blank" rel="nofollow noopener">titanpasswords.com</a> approach to tiered password and access strategies, where critical accounts receive additional protection layers beyond standard MFA.</p>
+
+<div class="callout"><strong>Emergency checklist for IT teams:</strong> (1) Review Entra ID sign-in logs for device code authentication events from unfamiliar locations. (2) Revoke all OAuth tokens granted to unrecognised applications. (3) Implement conditional access policies to block device code flows. (4) Enable sign-in risk policies to detect anomalous token usage. (5) Notify users about device code phishing — especially finance, HR, and executive teams who handle high-value transactions.</div>
+
+<p>Additionally, deploying enterprise-grade antivirus and endpoint protection can help detect the initial malware payloads used in token theft campaigns. Solutions like <a href="https://dhwnh.com/g/f6b07970c6ca5cdc7c0be5a65aad3a/?erid=5jtCeReLm1S3Xx3LfA8QF84" target="_blank" rel="nofollow sponsored noopener">Kaspersky Endpoint Security</a> provide real-time protection against the infostealer malware that often supplements phishing campaigns. For security teams managing incident communications, encrypted email services like <a href="https://tsygg.com/g/p5lrcr1ak1ca5cdc7c0bce5d089991/" target="_blank" rel="nofollow sponsored noopener">Trekmail</a> ensure sensitive breach-related correspondence cannot be intercepted during the response window.</p>
+
+<h2 id="kali365-in-context-the-token-theft-ecosystem">Kali365 in Context: The Token Theft Ecosystem</h2>
+
+<p>Kali365 did not emerge in a vacuum. It is part of a broader ecosystem of token theft platforms that security researchers have tracked throughout 2026. EvilTokens, which predates Kali365 by several weeks, operates on a similar device code phishing model and has been linked to hundreds of daily compromises. Both platforms have driven the FBI and Microsoft to issue public warnings — a rare step that signals the severity of the threat.</p>
+
+<p>The rise of these platforms correlates with the broader trend this year: <a href="/blog/ai-phishing-attacks-surge-1265-percent-2026.html">AI-generated phishing attacks have surged 1,265% in 2026</a>, and token theft represents the logical next step — attackers no longer need to trick users into typing passwords into fake login pages when they can trick them into authorising devices on the real login page.</p>
+
+<p>For organisations evaluating their long-term security posture, password managers remain essential for generating and storing strong, unique credentials for every account. Our <a href="/blog/best-password-managers-2026.html">independent password manager review</a> covers the top options for enterprise and individual use. Enterprise-focused security teams may also consider the approach outlined at <a href="https://ironvaultkeys.com/" target="_blank" rel="nofollow noopener">ironvaultkeys.com</a> for policy-compliant password management in regulated environments.</p>
+
+<h2 id="faqs-about-kali365-and-oauth-token-theft">FAQs About Kali365 and OAuth Token Theft</h2>
+
+<p><strong>Can Kali365 steal passwords too?</strong></p>
+<p>Kali365's primary mechanism is OAuth token theft, not password theft. However, once an attacker has access to a compromised account, they can enumerate the victim's saved credentials, email archives, and internal systems — which may contain passwords stored or transmitted in plaintext.</p>
+
+<p><strong>Does Microsoft MFA stop Kali365?</strong></p>
+<p>No. Kali365's device code phishing technique is specifically designed to bypass MFA. The device code authentication flow does not trigger Microsoft's MFA challenge because it is designed for scenarios where interactive authentication is not possible. This is why conditional access policies to block device code flows are critical.</p>
+
+<p><strong>How quickly should organisations respond to the FBI warning?</strong></p>
+<p>Immediately. The FBI's PSA on Kali365 was issued on May 21, 2026, and Microsoft has confirmed that hundreds of organisations are compromised daily through device code phishing. Every day without conditional access policies blocking device code flows is a day attackers can target your tenant.</p>
+
+<p><strong>Is Kali365 the same as EvilTokens?</strong></p>
+<p>No, but they are similar. Kali365 and EvilTokens are separate phishing-as-a-service platforms that both exploit device code authentication. EvilTokens was identified weeks before Kali365. Both platforms have triggered public warnings from the FBI and Microsoft due to their scale and effectiveness.</p>
+
+<p><strong>Can a password manager help against OAuth token theft?</strong></p>
+<p>Indirectly, yes. While a password manager cannot prevent OAuth token theft (the attacker never needs your password), it helps by generating unique, strong passwords for every account. Combined with phishing-resistant MFA like FIDO2 passkeys, it creates a defence-in-depth strategy where token theft from one service does not compromise credentials across other services. <a href="https://randompasswordtool.com/" target="_blank" rel="nofollow noopener">randompasswordtool.com</a> offers technical tools for generating cryptographically secure passwords that pair well with enterprise token protection strategies.</p>
+
+<p><strong>This page contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you.</strong></p>
+
+    <div style="text-align:center">
+      <a href="/" class="bcta">Generate a Free Strong Password &#8594;</a>
+    </div>
+
+<div class="related" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--s2)"><h3 style="font-size:20px;margin-bottom:16px">Related Articles</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px"><div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/ai-found-record-security-bugs-may-2026-patch-guide.html">🛡️ AI Found 1,000+ Security Bugs This Month — Patch Your Passwo</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">17 May 2026</p></div>
+<div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/canvas-breach-data-not-deleted-phishing-waves-expected.html">⚠️ Canvas Data Wasn't Deleted, Security Experts Warn — Phishing</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">15 May 2026</p></div>
+<div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/yellowkey-bitlocker-bypass-zero-day-microsoft-2026.html">🛡️ YellowKey Zero-Day Bypasses BitLocker — Stolen Laptops Are N</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">14 May 2026</p></div>
+</div>
+</div>
+  </div>
+</main>
+
+<section style="background:#f0f4ff;padding:32px 22px;text-align:center;margin-top:0"><div style="max-width:800px;margin:0 auto"><h3 style="margin:0 0 14px;font-size:15px;color:#0d2137;font-weight:700">More Password Security Tools</h3><div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px"><a href="https://securekeygenerator.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; SecureKeyGen</a><a href="https://titanpasswords.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x2694;&#xfe0f; TitanPasswords</a><a href="https://freestrongpassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f510; Free Strong Password</a><a href="https://instantpasswordgenerator.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x26a1; Instant Password</a><a href="https://ironvaultkeys.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f5dd;&#xfe0f; Iron Vault Keys</a><a href="https://randompasswordtool.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; Random Pwd Tool</a><a href="https://safepassbuilder.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f468;&#x200d;&#x1f469;&#x200d;&#x1f467;&#x200d;&#x1f466; Safe Pass Builder</a><a href="https://trustypassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f6e1;&#xfe0f; Trusty Password</a><a href="https://strongpassfactory.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x2699;&#xfe0f; StrongPassFactory</a><a href="https://securekeygenerator.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; SecureKeyGen.org</a><a href="https://trustypassword.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f4da; TrustyPassword.org</a></div></div></section>
+<footer>
+  <div class="flink">
+    <a href="/">Password Generator</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/affiliate-disclosure.html">Disclosure</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <p>&copy; 2026 BestPasswordGenerator.org &mdash; Free password generation and cybersecurity guides</p>
+</footer>
+
+<div id="cc" style="position:fixed;bottom:0;left:0;right:0;background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;font-size:13px;z-index:1000">
+  <span>We use cookies to improve your experience. <a href="/cookie-policy.html" style="color:var(--al);text-decoration:underline">Learn more</a></span>
+  <button onclick="this.parentElement.style.display='none'" style="background:var(--a);color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:13px">Accept</button>
+</div>
+
+</body>
+</html>
