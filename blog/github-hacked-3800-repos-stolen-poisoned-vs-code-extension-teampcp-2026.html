@@ -236,7 +236,7 @@ footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-
 <p>While GitHub stated that <strong>no customer data was compromised</strong>, the breach represents a seismic event in the software supply chain security landscape. If GitHub itself can fall victim to a poisoned IDE extension, no organization is safe.</p>
 <h2 id="the-attack-vector-a-poisoned-vs-code-extension">The Attack Vector: A Poisoned VS Code Extension</h2>
 <p>Security researchers quickly identified the compromised extension as <strong>Nx Console</strong> (<code>nrwl.angular-console</code>, version 18.95.0), published on May 18, 2026. The malicious version was live for just 18 minutes before being taken down, but that was enough time for it to reach at least one GitHub employee's development environment.</p>
-<p>Sophos X-Ops, which published a detailed analysis of the attack, recovered the <a href="https://dhwnh.com/g/f6b07970c6ca5cdc7c0be5a65aad3a/?erid=5jtCeReLm1S3Xx3LfA8QF84" target="_blank" rel="nofollow sponsored noopener">malware</a> responsible: a Python backdoor named <strong>cat.py</strong> installed at <code>/Users/%/.local/share/kitty/cat.py</code>. The backdoor is particularly sophisticated in its command-and-control approach:</p>
+<p>Sophos X-Ops, which published a detailed analysis of the attack, recovered the malware responsible: a Python backdoor named <strong>cat.py</strong> installed at <code>/Users/%/.local/share/kitty/cat.py</code>. The backdoor is particularly sophisticated in its command-and-control approach:</p>
 <ul>
 <li>It uses GitHub's own Search API as a covert communication channel</li>
 <li>It polls <code>api.github.com/search/commits</code> every hour for the keyword <code>firedalazer</code></li>
@@ -357,10 +357,5 @@ Rotate any credentials that might be linked to GitHub or developer tooling, enab
   <button onclick="this.parentElement.style.display='none'" style="background:var(--a);color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:13px">Accept</button>
 </div>
 
-
-
-<section style="background:var(--s1);border:1px solid var(--s2);border-radius:12px;padding:24px;margin:32px 0;max-width:800px"><h3 style="margin:0 0 12px;font-size:16px">🔗 Recommended Security Tools</h3><p style="font-size:13px;color:var(--t3);margin:0 0 12px">We may earn a commission if you purchase through these links — at no extra cost to you.</p><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
-<a href="https://codeaven.com/g/d6ig17yj38ca5cdc7c0bcfba9fca8a/" target="_blank" rel="nofollow sponsored noopener" style="background:var(--bg);border:1px solid var(--s2);border-radius:8px;padding:10px 14px;text-decoration:none;color:var(--t1);font-size:13px;font-weight:600;display:block">🔒 Hide My Name VPN</a>
-</div></section>
 </body>
 </html>

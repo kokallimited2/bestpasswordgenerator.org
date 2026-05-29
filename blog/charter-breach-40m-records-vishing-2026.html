@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charter Breach: 40M Records Stolen via Voice Phishing</title>
+<meta name="description" content="Charter Communications confirms 40M records stolen in ShinyHunters vishing attack. How voice phishing bypasses passwords and what you can do about it.">
+<link rel="canonical" href="https://bestpasswordgenerator.org/blog/charter-breach-40m-records-vishing-2026.html">
+<base href="/">
+<meta property="og:title" content="Charter Breach: 40M Records Stolen via Voice Phishing">
+<meta property="og:description" content="Charter Communications confirms 40M records stolen in ShinyHunters vishing attack. How voice phishing bypasses passwords and what you can do about it.">
+<meta property="og:url" content="https://bestpasswordgenerator.org/blog/charter-breach-40m-records-vishing-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://bestpasswordgenerator.org/og-image.png">
+<meta property="article:published_time" content="2026-05-29">
+<meta property="article:author" content="Security Research Team">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Charter Breach: 40M Records Stolen via Voice Phishing">
+<meta name="twitter:description" content="Charter Communications confirms 40M records stolen in ShinyHunters vishing attack. How voice phishing bypasses passwords and what you can do about it.">
+<meta name="twitter:image" content="https://bestpasswordgenerator.org/og-image.png">
+<meta property="article:modified_time" content="2026-05-29">
+<meta property="article:section" content="Threat Intelligence">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bestpasswordgenerator.org/#organization",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "sameAs": [
+        "https://twitter.com/"
+      ],
+      "knowsAbout": [
+        "password security",
+        "cybersecurity"
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bestpasswordgenerator.org/#website",
+      "url": "https://bestpasswordgenerator.org/",
+      "name": "BestPasswordGenerator.org",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bestpasswordgenerator.org/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://bestpasswordgenerator.org/#webapp",
+      "name": "BestPasswordGenerator.org",
+      "url": "https://bestpasswordgenerator.org/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://bestpasswordgenerator.org/#webapi",
+      "name": "BestPasswordGenerator.org API",
+      "url": "https://bestpasswordgenerator.org/",
+      "description": "Generate secure passwords programmatically",
+      "potentialAction": [
+        {
+          "@type": "GenerateAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bestpasswordgenerator.org/?length=16&count=1"
+          }
+        }
+      ],
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bestpasswordgenerator.org/#author",
+      "name": "Security Research Team",
+      "jobTitle": "Cybersecurity Researcher",
+      "url": "https://bestpasswordgenerator.org/about.html",
+      "sameAs": [
+        "https://bestpasswordgenerator.org/about.html"
+      ],
+      "knowsAbout": [
+        "password security",
+        "NIST guidelines",
+        "cryptography",
+        "cybersecurity"
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://bestpasswordgenerator.org/blog/charter-breach-40m-records-vishing-2026.html#article",
+      "headline": "Charter Breach: 40M Records Stolen via Voice Phishing",
+      "description": "Charter Communications confirms 40M records stolen in ShinyHunters vishing attack. How voice phishing bypasses passwords and what you can do about it.",
+      "image": "https://bestpasswordgenerator.org/og-image.png",
+      "author": {
+        "@id": "https://bestpasswordgenerator.org/#author"
+      },
+      "publisher": {
+        "@id": "https://bestpasswordgenerator.org/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://bestpasswordgenerator.org/#website"
+      },
+      "datePublished": "2026-05-29",
+      "dateModified": "2026-05-29",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://bestpasswordgenerator.org/blog/charter-breach-40m-records-vishing-2026.html"
+      },
+      "wordCount": "2030",
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".callout"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://bestpasswordgenerator.org/blog/charter-breach-40m-records-vishing-2026.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bestpasswordgenerator.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://bestpasswordgenerator.org/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Charter Breach: 40M Records Stolen via Voice Phishing",
+          "item": "https://bestpasswordgenerator.org/blog/charter-breach-40m-records-vishing-2026.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to worry about vishing if I use strong passwords?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Strong passwords protect against password cracking and credential guessing, but vishing bypasses passwords entirely by tricking you into handing them over. Think of your password as one layer in a defence-in-depth strategy — essential but not su"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was Charter the only company affected by this vishing campaign?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. ShinyHunters has conducted similar vishing and social engineering attacks against hundreds of companies worldwide, including Carnival Cruise Line (6 million records), Instructure/Canvas (275 million student records), and numerous Salesforce custo"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check if my data was stolen in the Charter breach?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visit Have I Been Pwned and search for your email address. If Charter notifies affected individuals, they will also send direct notifications. You can also check your accounts for signs of compromise — unexpected password reset emails, unfamiliar log"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I change my passwords after this breach?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, regardless of whether you are a Charter customer. If you use any of the same passwords across multiple accounts, change them now. Using a password generator ensures every account gets a strong, unique credential. Enable MFA everywhere, and consi"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a phone call really bypass multi-factor authentication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If an attacker calls you, claims to be your IT department, and asks you to read out a code sent to your phone \"for verification,\" you are handing them your MFA code. This is why FIDO2 hardware security keys are considered phishing-resistant: ins"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many people fall for vishing attacks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Studies suggest that 25-40% of targeted employees fall for well-executed vishing calls. In the 2026 Verizon DBIR, social engineering was a factor in 62% of all confirmed breaches, with phone-based attacks showing a median success rate 40% higher than"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between phishing, smishing, and vishing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Phishing uses deceptive emails, smishing uses SMS text messages, and vishing uses phone calls. All three aim to trick the target into revealing credentials or sensitive information. Vishing is considered the most dangerous because phone calls bypass "
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#0d2137;--pl:#1a365d;--a:#2563eb;--al:#3b82f6;--t:#1a202c;--t2:#4a5568;--t3:#718096;--s1:#f7fafc;--s2:#e2e8f0;--w:#fff;--b:#e53e3e;--g:#38a169}
+body{font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;background:var(--w);color:var(--t);line-height:1.7}
+nav{background:var(--p);padding:12px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+nav .logo{color:#fff;font-weight:900;font-size:20px;text-decoration:none}
+nav a{color:rgba(255,255,255,0.8);font-size:14px;text-decoration:none;margin-left:18px;transition:.2s}
+nav a:hover,nav a.cur{color:#fff}
+.post-container{max-width:800px;margin:0 auto;padding:36px 22px 60px}
+.tag{display:inline-block;background:var(--p);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+.breadcrumb{margin-bottom:18px;font-size:13px;color:var(--t3)}
+.breadcrumb a{color:var(--a);text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+h1{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;color:var(--t);line-height:1.3;max-width:700px;margin:0 auto 8px;text-align:center}
+.meta{font-size:13px;color:var(--t3);text-align:center;margin-bottom:28px}
+.callout{background:#fffbeb;border-left:4px solid var(--b);padding:16px 20px;margin:24px 0;border-radius:4px;font-size:15px}
+h2{font-size:clamp(1.2rem,2.5vw,1.5rem);font-weight:800;color:var(--t);margin:40px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--s2)}
+h2:first-of-type{margin-top:0}
+h3{font-size:clamp(1.05rem,2vw,1.2rem);font-weight:700;color:var(--t);margin:28px 0 10px}
+p,li{font-size:16px;line-height:1.8;color:var(--t2);margin:0 0 16px}
+li{margin-bottom:6px}
+ul,ol{padding-left:24px;margin:0 0 20px}
+a{color:var(--a);text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--s1);padding:2px 6px;border-radius:3px;font-size:14px;border:1px solid var(--s2)}
+.bcta{display:inline-block;background:linear-gradient(135deg,var(--p),var(--pl),#1e40af);color:#fff;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;margin:32px 0 0;transition:.2s}
+.bcta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,0.3);text-decoration:none}
+footer{background:var(--p);color:rgba(255,255,255,0.7);padding:32px 22px;text-align:center;font-size:13px;line-height:1.8;margin-top:48px}
+footer a{color:rgba(255,255,255,0.8);text-decoration:none;margin:0 6px}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.rpost{background:var(--s1);padding:16px;border-radius:8px;border:1px solid var(--s2);transition:.2s}
+.rpost:hover{border-color:var(--a);box-shadow:0 2px 8px rgba(37,99,235,0.1)}
+.rtag{display:inline-block;background:var(--a);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase}
+@media(max-width:600px){.post-container{padding:24px 16px 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">&#x1f511; BestPasswordGenerator</a>
+  <div>
+    <a href="/">Generator</a>
+<a href="/blog.html" class="cur">Blog</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <div class="post-container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> &#8250; <a href="/blog.html">Blog</a> &#8250;
+      <span>Charter Breach: 40M Records Stolen via Voice Phishing</span>
+    </div>
+
+    <div style="text-align:center;margin-bottom:28px">
+      <div class="tag" style="margin-bottom:8px">Threat Intelligence</div>
+      <h1>📞 Charter Breach: 40M Records Stolen via Voice Phishing</h1>
+      <div class="meta">By <strong>Security Research Team</strong>, BestPasswordGenerator.org &middot; 29 May 2026 &middot; 10 min read &middot; 2,030 words</div>
+    </div>
+
+<div class="toc" style="background:var(--s1);border-radius:12px;padding:20px 24px;margin-bottom:32px;border:1px solid var(--s2)"><h3 style="margin:0 0 8px;font-size:14px;color:var(--t2)">On this page</h3><ul style="margin:0;padding-left:18px;font-size:14px;line-height:2"><li><a href="#what-happened-at-charter-communications">What happened at Charter Communications</a></li>
+<li><a href="#what-is-vishing-and-why-is-it-so-effective">What is vishing and why is it so effective?</a></li>
+<li><a href="#why-salesforce-and-sso-are-prime-targets">Why Salesforce and SSO are prime targets</a></li>
+<li><a href="#how-to-protect-yourself-from-vishing-attacks">How to protect yourself from vishing attacks</a></li>
+<li><a href="#what-the-charter-breach-means-for-your-passwords">What the Charter breach means for your passwords</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul></div>
+
+<p><strong>Charter Communications, one of the largest broadband providers in the United States operating the Spectrum brand, has confirmed a data breach after the ShinyHunters extortion group claimed to have stolen 40 million customer records. The attackers gained access through a voice phishing (vishing) attack that compromised an employee's Microsoft Entra single sign-on account — a method that bypasses traditional password defences entirely.</strong></p>
+<p>This attack proves something we have been warning about throughout 2026: having a strong password is no longer enough. When attackers can call up an employee, trick them into handing over SSO credentials via a phone call, and then export millions of records from cloud applications, the entire model of password-only security collapses.</p>
+<p>Here is exactly what happened at Charter, how vishing works, what the stolen data means for affected customers, and — most importantly — the concrete steps you need to take to protect yourself from this type of attack.</p>
+<h2 id="what-happened-at-charter-communications">What happened at Charter Communications</h2>
+<p>On April 1, 2026, the ShinyHunters extortion group launched a voice phishing campaign targeting Charter Communications. According to information shared with BleepingComputer, the attackers called Charter employees and used social engineering to trick one of them into providing access to their Microsoft Entra (formerly Azure Active Directory) account.</p>
+<p>Once inside the SSO account, the attackers pivoted to Charter's Salesforce instance — a customer relationship management platform containing millions of consumer and business records. They exported data including:</p>
+<ul>
+<li>Full names and email addresses</li>
+<li>Physical addresses and phone numbers</li>
+<li>Phone type and plan information</li>
+<li>Customer service support ticket data</li>
+<li>Some customer proprietary network information (CPNI)</li>
+</ul>
+<p>Charter initially claimed that "no sensitive personal information or customer proprietary network information was exfiltrated," but the ShinyHunters group contradicted this, stating that CPNI was among the stolen records. In total, the attackers claim to have taken <strong>40 million records</strong> from Charter's Salesforce system.</p>
+<p>The breach went public when Charter appeared on the ShinyHunters data leak site with a ransom demand. Charter acknowledged the incident in a statement, saying it was "aware of the situation, following our security protocols and in the process of alerting appropriate authorities."</p>
+<p>Stay informed about the latest <a href="/blog/password-breach-statistics-2026.html">data breach statistics and password security trends</a> to understand how these attacks fit into the broader threat landscape.</p>
+<h2 id="what-is-vishing-and-why-is-it-so-effective">What is vishing and why is it so effective?</h2>
+<p>Vishing — short for voice phishing — is a social engineering attack conducted over the phone. Instead of sending a deceptive email (traditional phishing) or a text message (smishing), the attacker calls the target directly and impersonates a trusted party.</p>
+<p>In the Charter attack, ShinyHunters called an employee and posed as an IT support representative. Using stolen internal knowledge and confidence tricks, they convinced the employee to share their Microsoft Entra login credentials and multi-factor authentication codes.</p>
+<p>There are several reasons vishing is alarmingly effective:</p>
+<p><strong>Voice commands trust.</strong> Humans are conditioned to trust voice conversations. When someone calls and sounds professional, uses the right internal terminology, and creates a sense of urgency, most people comply before their rational brain catches up.</p>
+<p><strong>Vishing bypasses email security.</strong> Unlike phishing emails that spam filters can catch, a phone call has no headers to analyse, no links to scan, and no sender domain to verify. Traditional email security tools are completely blind to vishing.</p>
+<p><strong>Multi-factor authentication can be socially engineered.</strong> Even when MFA is enabled, an attacker who has convinced an employee to read out a one-time code over the phone can bypass it. The FBI has warned repeatedly that MFA fatigue and vishing are defeating the security that MFA was designed to provide.</p>
+<p><strong>Vishing targets the human layer.</strong> Charter likely had strong technical controls — firewalls, endpoint detection, SIEM monitoring. But none of those defend against an employee voluntarily handing over credentials over the phone. The human layer is always the weakest.</p>
+<p>For a deeper look at how MFA prompt bombing works alongside vishing attacks, see our coverage of <a href="/blog/mfa-prompt-bombing-attacks-surge-2026.html">MFA prompt bombing attacks surging in 2026</a>.</p>
+<h2 id="why-salesforce-and-sso-are-prime-targets">Why Salesforce and SSO are prime targets</h2>
+<p>The Charter breach is part of a much larger pattern. Over the past year, ShinyHunters has been systematically targeting companies that use Salesforce and single sign-on (SSO) identity providers like Microsoft Entra, Okta, and Google Workspace.</p>
+<p>The attack chain follows a consistent playbook:</p>
+<ol>
+<li>
+<p><strong>Reconnaissance</strong> — The attackers research their target, identifying employees with access to Salesforce and other cloud applications. LinkedIn, corporate websites, and data broker services provide all the information needed.</p>
+</li>
+<li>
+<p><strong>Vishing call</strong> — The attackers call the employee, impersonating IT support, a vendor, or a senior executive. They use urgency ("your account will be locked") and authority to extract credentials.</p>
+</li>
+<li>
+<p><strong>SSO compromise</strong> — Once inside one SSO account, the attackers have access to every cloud application connected to that identity provider. Salesforce, Microsoft 365, Google Workspace, Slack, Zendesk, and Atlassian are all reachable through a single set of stolen credentials.</p>
+</li>
+<li>
+<p><strong>Data exfiltration</strong> — From Salesforce, the attackers run automated exports. ShinyHunters has used tools like Salesloft and other integration platforms to steal OAuth tokens that give them persistent access to Salesforce instances without needing to log in again.</p>
+</li>
+<li>
+<p><strong>Extortion</strong> — With terabytes of stolen data, the attackers post a sample on their leak site and demand a ransom. If the company refuses, the data is leaked publicly or sold to other cybercriminals.</p>
+</li>
+</ol>
+<p>This is the same playbook used in the <a href="/blog/github-hacked-3800-repos-stolen-poisoned-vs-code-extension-teampcp-2026.html">GitHub breach linked to the TanStack npm supply-chain attack</a> and the <a href="/blog/canvas-breach-275-million-students-password-safety.html">Canvas breach affecting 275 million students</a>. The attack chain is remarkably consistent across all these incidents.</p>
+<p>ShinyHunters has also targeted Salesloft and other integration companies specifically to steal OAuth tokens that enable credential-less access to Salesforce instances — meaning they do not even need a password to begin with.</p>
+<h2 id="how-to-protect-yourself-from-vishing-attacks">How to protect yourself from vishing attacks</h2>
+<p>While the Charter breach affected corporate systems, the same vishing tactics can target individuals. Criminals call pretending to be your bank, your mobile provider, or your internet service provider, asking you to "verify your account" by sharing a code sent to your phone. That code is actually a password reset or MFA prompt.</p>
+<p>Here are the practical steps you can take immediately:</p>
+<p><strong>Step 1: Never give out authentication codes over the phone.</strong></p>
+<p>No legitimate organisation will call you and ask for a one-time passcode. If someone calls and asks for a code "to verify your identity," hang up immediately. Call your bank or provider back using the number on the back of your card — not a number the caller gives you.</p>
+<p><strong>Step 2: Use a password manager to generate and store unique credentials.</strong></p>
+<p>If your password is leaked in one data breach, you want that password to work on exactly one account — not all of them. Generating a <a href="https://bestpasswordgenerator.org/">strong, unique password</a> for every account ensures that a single credential leak cannot cascade into a full account takeover. Password managers like <a href="https://bitwarden.com/">Bitwarden</a> and <a href="https://1password.com/">1Password</a> also generate cryptographically strong passwords that are resistant to both brute-force and dictionary attacks.</p>
+<p><strong>Step 3: Enable phishing-resistant MFA where available.</strong></p>
+<p>Standard TOTP and SMS-based MFA can be bypassed by vishing (when the attacker tricks you into reading the code). FIDO2/WebAuthn security keys (YubiKey, Google Titan) cannot — there is no code to read out over the phone. For high-value accounts such as email, banking, and cloud services, use a hardware security key.</p>
+<p><strong>Step 4: Monitor your accounts for signs of compromise.</strong></p>
+<p>Run your email address through <a href="https://haveibeenpwned.com/">Have I Been Pwned</a> regularly. Check your account "recent activity" or "devices" sections for unrecognised logins. If you see a login from an unfamiliar location, change your password immediately and revoke all active sessions.</p>
+<p><strong>Step 5: Set up a family security protocol.</strong></p>
+<p>If you manage accounts for family members — especially older relatives who are frequent targets of vishing — establish a verbal "safe word" that must be used before anyone shares sensitive information over the phone. This simple technique stops social engineering attacks cold because the attacker does not know the safe word. For an extra layer of protection when accessing accounts from public Wi-Fi, a <a href="https://grfpr.com/g/exe221unkpca5cdc7c0bddf84d4c0b/">VPN service</a> encrypts your internet connection and keeps your online activity hidden from network-level snooping.</p>
+<h2 id="what-the-charter-breach-means-for-your-passwords">What the Charter breach means for your passwords</h2>
+<p>The Charter breach, like the <a href="/blog/carnival-cruise-breach-6-million-social-engineering.html">Carnival Cruise data breach</a> confirmed days earlier, delivers a clear message: passwords alone are an insufficient defence against modern threats.</p>
+<p>When attackers can bypass passwords entirely through social engineering — by calling up an employee and convincing them to hand over their SSO credentials — the traditional advice of "use a strong password" covers only part of the problem. You also need:</p>
+<ul>
+<li>Strong, unique passwords for every account (so a breach at one service does not affect others)</li>
+<li>Multi-factor authentication on every account that offers it</li>
+<li>Phishing-resistant MFA (hardware security keys) for your most sensitive accounts</li>
+<li>A password manager to handle the complexity of maintaining dozens of unique credentials</li>
+<li>Security awareness training — including how to recognise vishing calls</li>
+</ul>
+<p>The <a href="/blog/best-password-managers-2026.html">best password managers in 2026</a> include all of these features: unique password generation, secure storage, breach monitoring, and support for hardware security keys. They transform the impossible task of remembering 100+ unique passwords into a manageable, automated system.</p>
+<p>If you use the same password for multiple accounts, the Charter breach puts you at risk even if you are not a Charter customer. Attackers who obtain credentials from one breach try them against every other service — this is called credential stuffing, and our <a href="/blog/credential-stuffing-attacks-surge-password-reuse-risk-2026.html">credential stuffing surge 2026 guide</a> explains why it is the fastest-growing attack vector this year.</p>
+<p>For enterprise users managing credentials across teams, the lessons from Charter are particularly important. The attack did not break cryptography or exploit a software vulnerability — it tricked a human. Organisations should review their SSO configurations, restrict Salesforce data exports to authorised IP ranges, implement phone call verification protocols for support requests, and train employees specifically on vishing recognition.</p>
+<h2 id="faqs">FAQs</h2>
+<p><strong>Do I need to worry about vishing if I use strong passwords?</strong></p>
+<p>Yes. Strong passwords protect against password cracking and credential guessing, but vishing bypasses passwords entirely by tricking you into handing them over. Think of your password as one layer in a defence-in-depth strategy — essential but not sufficient on its own.</p>
+<p><strong>Was Charter the only company affected by this vishing campaign?</strong></p>
+<p>No. ShinyHunters has conducted similar vishing and social engineering attacks against hundreds of companies worldwide, including Carnival Cruise Line (6 million records), Instructure/Canvas (275 million student records), and numerous Salesforce customers. The FBI has issued warnings about this group's widespread SSO-targeting campaign.</p>
+<p><strong>How do I check if my data was stolen in the Charter breach?</strong></p>
+<p>Visit Have I Been Pwned and search for your email address. If Charter notifies affected individuals, they will also send direct notifications. You can also check your accounts for signs of compromise — unexpected password reset emails, unfamiliar login locations, or devices you do not recognise.</p>
+<p><strong>Should I change my passwords after this breach?</strong></p>
+<p>Yes, regardless of whether you are a Charter customer. If you use any of the same passwords across multiple accounts, change them now. Using a <a href="https://bestpasswordgenerator.org/">password generator</a> ensures every account gets a strong, unique credential. Enable MFA everywhere, and consider a hardware security key for your most sensitive accounts.</p>
+<p><strong>Can a phone call really bypass multi-factor authentication?</strong></p>
+<p>Yes. If an attacker calls you, claims to be your IT department, and asks you to read out a code sent to your phone "for verification," you are handing them your MFA code. This is why FIDO2 hardware security keys are considered phishing-resistant: instead of a sharable code, they use a cryptographic challenge-response protocol that cannot be relayed over the phone.</p>
+<p><strong>How many people fall for vishing attacks?</strong></p>
+<p>Studies suggest that 25-40% of targeted employees fall for well-executed vishing calls. In the 2026 Verizon DBIR, social engineering was a factor in 62% of all confirmed breaches, with phone-based attacks showing a median success rate 40% higher than email phishing.</p>
+<p><strong>What is the difference between phishing, smishing, and vishing?</strong></p>
+<p>Phishing uses deceptive emails, smishing uses SMS text messages, and vishing uses phone calls. All three aim to trick the target into revealing credentials or sensitive information. Vishing is considered the most dangerous because phone calls bypass email security filters and exploit the natural human trust in voice communication.</p>
+
+    <div style="text-align:center">
+      <a href="/" class="bcta">Generate a Free Strong Password &#8594;</a>
+    </div>
+
+<div class="related" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--s2)"><h3 style="font-size:20px;margin-bottom:16px">Related Articles</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px"><div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/ai-found-record-security-bugs-may-2026-patch-guide.html">🛡️ AI Found 1,000+ Security Bugs This Month — Patch Your Passwo</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">17 May 2026</p></div>
+<div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/canvas-breach-data-not-deleted-phishing-waves-expected.html">⚠️ Canvas Data Wasn't Deleted, Security Experts Warn — Phishing</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">15 May 2026</p></div>
+<div class="rpost"><div class="rtag">Threat Intelligence</div><h4 style="margin:4px 0"><a href="/blog/yellowkey-bitlocker-bypass-zero-day-microsoft-2026.html">🛡️ YellowKey Zero-Day Bypasses BitLocker — Stolen Laptops Are N</a></h4><p style="font-size:13px;color:var(--t3);margin:4px 0 0">14 May 2026</p></div>
+</div>
+</div>
+  </div>
+</main>
+
+<section style="background:#f0f4ff;padding:32px 22px;text-align:center;margin-top:0"><div style="max-width:800px;margin:0 auto"><h3 style="margin:0 0 14px;font-size:15px;color:#0d2137;font-weight:700">More Password Security Tools</h3><div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px"><a href="https://securekeygenerator.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; SecureKeyGen</a><a href="https://titanpasswords.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x2694;&#xfe0f; TitanPasswords</a><a href="https://freestrongpassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f510; Free Strong Password</a><a href="https://instantpasswordgenerator.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x26a1; Instant Password</a><a href="https://ironvaultkeys.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f5dd;&#xfe0f; Iron Vault Keys</a><a href="https://randompasswordtool.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; Random Pwd Tool</a><a href="https://safepassbuilder.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f468;&#x200d;&#x1f469;&#x200d;&#x1f467;&#x200d;&#x1f466; Safe Pass Builder</a><a href="https://trustypassword.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f6e1;&#xfe0f; Trusty Password</a><a href="https://strongpassfactory.com/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x2699;&#xfe0f; StrongPassFactory</a><a href="https://securekeygenerator.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f511; SecureKeyGen.org</a><a href="https://trustypassword.org/" style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;text-decoration:none;color:#1a202c;font-size:13px;font-weight:600">&#x1f4da; TrustyPassword.org</a></div></div></section>
+<footer>
+  <div class="flink">
+    <a href="/">Password Generator</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/affiliate-disclosure.html">Disclosure</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <p>&copy; 2026 BestPasswordGenerator.org &mdash; Free password generation and cybersecurity guides</p>
+</footer>
+
+<div id="cc" style="position:fixed;bottom:0;left:0;right:0;background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;font-size:13px;z-index:1000">
+  <span>We use cookies to improve your experience. <a href="/cookie-policy.html" style="color:var(--al);text-decoration:underline">Learn more</a></span>
+  <button onclick="this.parentElement.style.display='none'" style="background:var(--a);color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:13px">Accept</button>
+</div>
+
+</body>
+</html>
