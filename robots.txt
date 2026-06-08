@@ -57,3 +57,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://bestpasswordgenerator.org/sitemap.xml
+Sitemap: https://bestpasswordgenerator.org/blog/sitemap.xml
