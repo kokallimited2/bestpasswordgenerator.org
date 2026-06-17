@@ -42,6 +42,6 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://bestpasswordgenerator.net/sitemap.xml
+Sitemap: https://bestpassword.org/sitemap.xml
 
 
