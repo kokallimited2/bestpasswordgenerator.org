@@ -5,6 +5,34 @@
   },
   "posts": [
     {
+      "id": "6561",
+      "slug": "authy-vs-google-vs-microsoft-authenticator-2026",
+      "url": "/blog/authy-vs-google-vs-microsoft-authenticator-2026.html",
+      "title": "Authy vs Google Authenticator vs Microsoft Authenticator 2026 \u2014 Best 2FA App",
+      "meta": "Authy vs Google Authenticator vs Microsoft Authenticator compared. Security, backup, multi-device, platform support, and which 2FA app wins in 2026.",
+      "date": "24 June 2026",
+      "dateiso": "2026-06-24",
+      "category": "Comparison",
+      "emoji": "\ud83d\udd10",
+      "featured": false,
+      "readtime": "8 min read",
+      "author": "Ateeq Y Tanoli",
+      "authorTitle": "",
+      "tags": [
+        "authy-vs-google-authenticator",
+        "microsoft-authenticator",
+        "authy",
+        "google-authenticator",
+        "best-authenticator-app",
+        "2fa-app-comparison",
+        "totp",
+        "multi-factor-authentication"
+      ],
+      "excerpt": "Authy vs Google Authenticator vs Microsoft Authenticator 2026 \u2014 comprehensive head-to-head on security, backup recovery, platform support, and which 2FA app wins.",
+      "meta_description": "Authy vs Google Authenticator vs Microsoft Authenticator compared. Security architecture, encrypted backup, multi-device, and which authenticator app is best in 2026.",
+      "_commit_msg": "blog: add authy vs google vs microsoft authenticator comparison [skip ci]"
+    },
+    {
       "id": "6560",
       "slug": "are-browser-password-managers-safe-2026",
       "url": "/blog/are-browser-password-managers-safe-2026.html",
