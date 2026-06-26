@@ -98,6 +98,13 @@ nav a.cur{color:#fff;background:rgba(255,255,255,.12)}
 .lr>label{font-size:13px;font-weight:600;color:var(--t2);white-space:nowrap}
 .lr input[type=range]{flex:1;accent-color:var(--a);cursor:pointer}
 .lv{min-width:42px;text-align:center;font-size:1.05rem;font-weight:800;color:var(--a);background:#eff6ff;border-radius:8px;padding:3px 7px}
+
+/* PRESET BUTTONS */
+.prg{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.prb{flex:1;min-width:0;padding:9px 8px;border:2px solid var(--bd);border-radius:9px;background:#fff;color:var(--t2);font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit;text-align:center;white-space:nowrap}
+.prb:hover{border-color:var(--a);color:var(--a);background:#eff6ff;transform:translateY(-1px)}
+.prb:active{transform:translateY(0)}
+
 .genbtn{width:100%;padding:15px;background:linear-gradient(135deg,var(--a),#1d4ed8);color:#fff;border:none;border-radius:var(--rad);font-size:1rem;font-weight:700;cursor:pointer;letter-spacing:.5px;transition:all .2s;box-shadow:0 4px 14px rgba(37,99,235,.4);font-family:inherit}
 .genbtn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,.5)}.genbtn:active{transform:translateY(0)}
 
@@ -298,6 +305,13 @@ footer{background:var(--p);color:#fff;padding:56px 0 26px}
       <div class="or"><label class="tg" for="os"><input type="checkbox" id="os" checked onchange="doGen()"><span class="tgs"></span></label><label for="os">Symbols (!@#$)</label></div>
     </div>
 
+    <!-- Quick Preset Buttons -->
+    <div class="prg" role="group" aria-label="Quick presets">
+      <button class="prb" onclick="applyPreset('max')">🛡️ Max Security</button>
+      <button class="prb" onclick="applyPreset('nosym')">🔤 No Symbols</button>
+      <button class="prb" onclick="applyPreset('easy')">⌨️ Easy to Type</button>
+    </div>
+
     <button class="genbtn" onclick="doGen()" aria-label="Generate a new strong password">⚡ Generate Strong Password</button>
   </div>
 </section>
@@ -339,7 +353,7 @@ footer{background:var(--p);color:#fff;padding:56px 0 26px}
       <div class="stc" role="listitem">
         <div class="stn" aria-hidden="true">4</div>
         <h3>Copy and store safely</h3>
-        <p>Copy your password and store it in a reputable password manager. Never reuse passwords — each account needs its own unique credential. See our <a href="#tools">recommended tools</a>.</p>
+        <p>Copy your password and store it in a reputable password manager. Never reuse passwords — each account needs its own unique credential. See our <a href="#tools">recomended tools</a>.</p>
       </div>
     </div>
   </div>
@@ -595,7 +609,7 @@ footer{background:var(--p);color:#fff;padding:56px 0 26px}
 
 <!-- FAQPage Schema -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does your password generator work?","acceptedAnswer":{"@type":"Answer","text":"Our generator uses the Web Crypto API (crypto.getRandomValues()) built into your browser — a cryptographically secure PRNG. Your password is generated entirely on your device and never transmitted to any server."}},{"@type":"Question","name":"What is a good password length?","acceptedAnswer":{"@type":"Answer","text":"NIST SP 800-63B recommends a minimum of 8 characters, but we recommend 16 or more for sensitive accounts. A 16-character password with all character types achieves approximately 105 bits of entropy."}},{"@type":"Question","name":"Is this password generator safe to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. Passwords are generated locally in your browser using cryptographic randomness. We do not log, store, or transmit generated passwords. The tool works offline."}},{"@type":"Question","name":"Should I use a password manager?","acceptedAnswer":{"@type":"Answer","text":"Yes. Reusing passwords is the biggest security risk. A password manager lets you maintain unique passwords for every account. NCSC and CISA both recommend password managers as best practice."}},{"@type":"Question","name":"What is password entropy?","acceptedAnswer":{"@type":"Answer","text":"Entropy measures password unpredictability in bits. Formula: E = L × log₂(P) where L is length and P is pool size. A password with 80+ bits of entropy is considered strong by most security standards."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does your password generator work?","acceptedAnswer":{"@type":"Answer","text":"Our generator uses the Web Crypto API (crypto.getRandomValues()) built into your browser — a cryptographically secure PRNG. Your password is generated entirely on your device and never transmitted to any server."}},{"@type":"Question","name":"What is a good password length?","acceptedAnswer":{"@type":"Answer","text":"NIST SP 800-63B recommends a minimum of 8 characters, but we recommend 16 or more for sensitive accounts. A 16-character password with all character types achieves approximately 105 bits of entropy."}},{"@type":"Question","name":"Is this password generator safe to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. Passwords are generated locally in your browser using cryptographic randomness. We do not log, store, or transmit generated passwords. The tool works offline."}},{"@type":"Question","name":"Should I use a password manager?","acceptedAnswer":{"@type":"Answer","text":"Yes. Reusing passwords is the biggest security risk. A password manager lets you maintain unique passwords for every account. NCSC and CISA both recommend password managers as best practice."}},{"@type":"Question","name":"What is password entropy?","acceptedAnswer":{"@type":"Answer","text":"Entropy measures password unpredictability in bits. Formula: E = L x log2(P) where L is length and P is pool size. A password with 80+ bits of entropy is considered strong by most security standards."}}]}
 </script>
 
 <!-- HowTo Schema -->
@@ -604,11 +618,11 @@ footer{background:var(--p);color:#fff;padding:56px 0 26px}
 </script>
 
 <script>
-// ── COOKIE CONSENT ──────────────────────────────────────────────
+// -- COOKIE CONSENT --
 (function(){var c=localStorage.getItem('bpg-ck');if(!c)document.getElementById('ck').style.display='flex';})();
 function ckChoice(v){localStorage.setItem('bpg-ck',v);document.getElementById('ck').style.display='none';}
 
-// ── PASSWORD GENERATOR ──────────────────────────────────────────
+// -- PASSWORD GENERATOR --
 const CH={U:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',L:'abcdefghijklmnopqrstuvwxyz',N:'0123456789',S:'!@#$%^&*()-_=+[]{}|;:,.<>?/~'};
 
 function doGen(){
@@ -675,25 +689,46 @@ function fmtTime(s){
   return'∞ uncrackable';
 }
 
+// -- QUICK PRESETS --
+function applyPreset(name){
+  var ou=document.getElementById('ou');
+  var ol=document.getElementById('ol');
+  var on=document.getElementById('on');
+  var os=document.getElementById('os');
+  var ls=document.getElementById('ls');
+  var lv=document.getElementById('lv');
+  if(name==='max'){
+    ou.checked=true; ol.checked=true; on.checked=true; os.checked=true;
+    ls.value=32; lv.textContent='32';
+  } else if(name==='nosym'){
+    ou.checked=true; ol.checked=true; on.checked=true; os.checked=false;
+    ls.value=20; lv.textContent='20';
+  } else if(name==='easy'){
+    ou.checked=true; ol.checked=true; on.checked=true; os.checked=false;
+    ls.value=16; lv.textContent='16';
+  }
+  doGen();
+}
+
 function doCopy(){
   var pwd=document.getElementById('po').value;
-  if(!pwd||pwd==='Click generate below…')return;
+  if(!pwd||pwd==='Click generate below\u2026')return;
   navigator.clipboard.writeText(pwd).then(function(){
-    var b=document.getElementById('cpb');b.textContent='✓ Copied!';b.classList.add('ok');
+    var b=document.getElementById('cpb');b.textContent='\u2713 Copied!';b.classList.add('ok');
     setTimeout(function(){b.textContent='Copy';b.classList.remove('ok');},2000);
   }).catch(function(){
     document.getElementById('po').select();document.execCommand('copy');
   });
 }
 
-// ── FAQ ACCORDION ───────────────────────────────────────────────
+// -- FAQ ACCORDION --
 function faq(btn){
   var item=btn.parentElement,isOp=item.classList.contains('op');
   document.querySelectorAll('.fqi').forEach(function(i){i.classList.remove('op');i.querySelector('button').setAttribute('aria-expanded','false');});
   if(!isOp){item.classList.add('op');btn.setAttribute('aria-expanded','true');}
 }
 
-// ── LOAD BLOG POSTS FROM post.json ──────────────────────────────
+// -- LOAD BLOG POSTS FROM post.json --
 var bgClasses=['c1','c2','c3'];
 fetch('post.json')
   .then(function(r){return r.json();})
