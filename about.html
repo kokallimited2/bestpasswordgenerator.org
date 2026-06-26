@@ -1,16 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Best Password Generator — About</title>
-<meta name="description" content="About BestPasswordGenerator.org — a free password generator and security resource run by a hobbyist with a keen interest in password security.">
-<meta name="robots" content="index, follow">
-<meta http-equiv="refresh" content="0; url=/">
-<link rel="canonical" href="/">
-<script>window.location.href = '/';</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | BestPasswordGenerator.org</title>
+  <meta name="description" content="About BestPasswordGenerator.org — a free password generator and security resource run by a hobbyist with a keen interest in password security and online safety.">
+  <link rel="canonical" href="https://bestpasswordgenerator.org/about.html">
+  <meta property="og:title" content="About | BestPasswordGenerator.org">
+  <meta property="og:description" content="About BestPasswordGenerator.org — a free password generator and security resource run by a hobbyist with a keen interest in password security and online safety.">
+  <meta property="og:url" content="https://bestpasswordgenerator.org/about.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><path d='M18 2L4 8v10c0 9.1 6 17.5 14 19.6C26 35.5 32 27.1 32 18V8L18 2z' fill='%232563eb'/><rect x='15.5' y='17' width='5' height='4' rx='1' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About BestPasswordGenerator.org","url":"https://bestpasswordgenerator.org/about.html","description":"About page for BestPasswordGenerator.org — a free password security resource.","author":{"@type":"Person","name":"AA Tanoli","jobTitle":"Hobbyist with a keen interest in password security and online safety"}}</script>
+<style>
+:root{--p:#0d2137;--pl:#1a3a5c;--a:#2563eb;--ah:#1d4ed8;--g:#10b981;--r:#ef4444;--bg:#f8fafc;--bga:#f1f5f9;--t:#0f172a;--t2:#334155;--t3:#64748b;--bd:#e2e8f0;--rad:12px;--sh:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.06)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
+a{color:var(--a)}a:hover{text-decoration:underline}
+#ck{position:fixed;bottom:0;left:0;right:0;background:var(--p);color:#fff;padding:13px 22px;z-index:9999;display:none;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+#ck p{font-size:13px;color:rgba(255,255,255,.85);flex:1}#ck a{color:#93c5fd}
+.cbw{display:flex;gap:8px}.ca{background:var(--a);color:#fff;border:none;padding:7px 16px;border-radius:7px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit}.cd{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3);padding:7px 13px;border-radius:7px;cursor:pointer;font-size:13px;font-family:inherit}
+header{background:var(--p);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.hi{max-width:1200px;margin:0 auto;padding:0 22px;display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.ltx{font-size:16px;font-weight:800;color:#fff}.ltx span{color:#60a5fa}
+nav{display:flex;align-items:center;gap:2px}
+nav a{color:rgba(255,255,255,.75);text-decoration:none;padding:7px 12px;border-radius:8px;font-size:13px;font-weight:500;transition:all .15s}
+nav a:hover{background:rgba(255,255,255,.1);color:#fff;text-decoration:none}
+nav a.cur{color:#fff;background:rgba(255,255,255,.12)}
+.ncta{background:var(--a)!important;color:#fff!important;margin-left:5px}.ncta:hover{background:var(--ah)!important}
+.hbg{display:none;background:none;border:none;cursor:pointer;color:#fff;font-size:22px}
+.hero{background:linear-gradient(135deg,var(--p),var(--pl));padding:52px 22px;text-align:center}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.12);color:#93c5fd;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px}
+.hero h1{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:10px}
+.hero p{color:rgba(255,255,255,.68);font-size:1rem;max-width:500px;margin:0 auto}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+section{padding:60px 0}
+section.alt{background:var(--bga)}
+.stit{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:800;color:var(--p);margin-bottom:16px;letter-spacing:-.3px}
+.sdesc{font-size:15px;color:var(--t2);line-height:1.8;margin-bottom:20px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.infoc{background:#fff;border:1px solid var(--bd);border-radius:var(--rad);padding:24px}
+.infoc h3{font-size:14px;font-weight:700;color:var(--p);margin-bottom:8px}
+.infoc p{font-size:13px;color:var(--t3);line-height:1.7}
+.tag{display:inline-block;background:#eff6ff;color:var(--a);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 13px;border-radius:100px;margin-bottom:14px}
+@media(max-width:768px){nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--p);padding:14px;flex-direction:column;border-top:1px solid rgba(255,255,255,.1)}nav.op{display:flex}.hbg{display:block}.info-grid{grid-template-columns:1fr}section{padding:40px 0}}
+</style>
 </head>
 <body>
-<p><a href="/">Back to Best Password Generator</a>.</p>
+
+<div id="ck" style="display:flex">
+  <p>We use essential cookies. See our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+  <div class="cbw">
+    <button class="cd" onclick="this.parentElement.parentElement.style.display='none'">Decline</button>
+    <button class="ca" onclick="this.parentElement.parentElement.style.display='none'">Accept</button>
+  </div>
+</div>
+
+<header>
+  <div class="hi">
+    <a href="/" class="logo">
+      <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 2L4 8v10c0 9.1 6 17.5 14 19.6C26 35.5 32 27.1 32 18V8L18 2z" fill="#2563eb"/><rect x="14.5" y="16" width="7" height="6" rx="1.5" fill="white"/><circle cx="18" cy="19" r="2" fill="#2563eb"/></svg>
+      <span class="ltx">Best<span>Password</span></span>
+    </a>
+    <nav>
+      <a href="/">Generator</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html" class="cur">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <button class="hbg" onclick="document.getElementById('mn').classList.toggle('op')" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="tag">About</div>
+  <h1>About BestPasswordGenerator.org</h1>
+  <p>A free, no-nonsense password generator and security resource.</p>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="sdesc">BestPasswordGenerator.org is a free online password generator created by <strong>AA Tanoli</strong> — a hobbyist with a keen interest in password security and online safety. The site was built to help people generate strong, secure passwords quickly and easily, without tracking, sign-ups, or hidden costs.</p>
+    
+    <p class="sdesc">Every password you generate on this site is created entirely in your browser using cryptographically secure random number generation. Your passwords never leave your device — we don't store, transmit, or log anything you generate.</p>
+
+    <div class="info-grid">
+      <div class="infoc">
+        <h3>🔐 Privacy First</h3>
+        <p>All password generation happens client-side using <code>Crypto.getRandomValues()</code>. No data is sent to any server. No cookies track your usage. Your passwords stay yours.</p>
+      </div>
+      <div class="infoc">
+        <h3>📖 Security Resources</h3>
+        <p>Our blog covers NIST password guidelines, breach reports, multi-factor authentication, and practical password security advice — all written from a hobbyist perspective.</p>
+      </div>
+      <div class="infoc">
+        <h3>⚡ Always Free</h3>
+        <p>No premium tiers, no usage limits, no registration. The password generator and all tools will always be completely free to use.</p>
+      </div>
+      <div class="infoc">
+        <h3>📧 Get in Touch</h3>
+        <p>Questions, feedback, or partnership enquiries? <a href="/contact.html">Contact us</a> — we read every message.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap" style="text-align:center">
+    <div class="tag">Author</div>
+    <h2 class="stit">About the Author</h2>
+    <p class="sdesc" style="max-width:600px;margin:0 auto">BestPasswordGenerator.org is run by <strong>AA Tanoli</strong>, a hobbyist with a keen interest in password security and online safety. The site reflects a genuine passion for helping people stay safe online through better password habits and security awareness.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--p);color:#fff;padding:50px 0 24px;margin-top:60px">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="font-size:15px;font-weight:800;margin-bottom:8px">Best<span style="color:#60a5fa">Password</span></div>
+        <p style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.7">Free, cryptographically secure password generation for everyone. No data stored. No registration. No cost. Always.</p>
+        <p style="font-size:12px;color:rgba(255,255,255,.5);margin-top:10px">📧 <a href="/contact.html" style="color:#93c5fd">hello@bestpasswordgenerator.org</a></p>
+      </div>
+      <div>
+        <h4 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.4);margin-bottom:14px">Tools</h4>
+        <ul style="list-style:none;padding:0">
+          <li style="margin-bottom:6px"><a href="/" style="color:rgba(255,255,255,.65);font-size:13px">Password Generator</a></li>
+          <li style="margin-bottom:6px"><a href="/tools/" style="color:rgba(255,255,255,.65);font-size:13px">More Tools</a></li>
+          <li style="margin-bottom:6px"><a href="/blog.html" style="color:rgba(255,255,255,.65);font-size:13px">Security Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.4);margin-bottom:14px">Resources</h4>
+        <ul style="list-style:none;padding:0">
+          <li style="margin-bottom:6px"><a href="/blog.html" style="color:rgba(255,255,255,.65);font-size:13px">Password Guides</a></li>
+          <li style="margin-bottom:6px"><a href="/blog.html#stats" style="color:rgba(255,255,255,.65);font-size:13px">Statistics</a></li>
+          <li style="margin-bottom:6px"><a href="/blog.html#news" style="color:rgba(255,255,255,.65);font-size:13px">Security News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.4);margin-bottom:14px">Legal</h4>
+        <ul style="list-style:none;padding:0">
+          <li style="margin-bottom:6px"><a href="/privacy-policy.html" style="color:rgba(255,255,255,.65);font-size:13px">Privacy Policy</a></li>
+          <li style="margin-bottom:6px"><a href="/terms.html" style="color:rgba(255,255,255,.65);font-size:13px">Terms of Use</a></li>
+          <li style="margin-bottom:6px"><a href="/cookie-policy.html" style="color:rgba(255,255,255,.65);font-size:13px">Cookie Policy</a></li>
+          <li style="margin-bottom:6px"><a href="/affiliate-disclosure.html" style="color:rgba(255,255,255,.65);font-size:13px">Affiliate Disclosure</a></li>
+          <li style="margin-bottom:6px"><a href="/contact.html" style="color:rgba(255,255,255,.65);font-size:13px">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);margin-top:32px;padding-top:18px;text-align:center;font-size:12px;color:rgba(255,255,255,.35)">
+      <p>© 2026 BestPasswordGenerator.org · All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var ck=document.getElementById('ck');if(localStorage.getItem('ck')==='1'){ck.style.display='none'}ck.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){localStorage.setItem('ck','1');ck.style.display='none'})})})();
+</script>
 </body>
 </html>
