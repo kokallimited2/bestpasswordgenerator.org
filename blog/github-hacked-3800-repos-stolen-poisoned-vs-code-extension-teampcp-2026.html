@@ -225,7 +225,7 @@ footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-
 <li><a href="#why-this-matters-for-your-password-security">Why This Matters for Your Password Security</a></li>
 <li><a href="#how-to-protect-yourself-after-the-github-breach">How to Protect Yourself After the GitHub Breach</a></li>
 <li><a href="#the-bigger-picture-supply-chain-attacks-are-the-new-normal">The Bigger Picture: Supply Chain Attacks Are the New Normal</a></li>
-<li><a href="#expert-analysis-why-developer-tools-are-the-perfect-target">Expert Analysis: Why Developer Tools Are the Perfect Target</a></li>
+<li><a href="#expert-analysis-why-developer-tools-are-the-perfect-target">Analysis: Why Developer Tools Are the Perfect Target</a></li>
 <li><a href="#faqs-github-vs-code-extension-breach">FAQs: GitHub VS Code Extension Breach</a></li>
 </ul></div>
 
@@ -309,7 +309,7 @@ footer .flink{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-
 <p>The GitHub breach is not an isolated incident. It is part of a broader trend where attackers target the software development supply chain — the tools, libraries, and platforms developers trust to build software.</p>
 <p>In just the past few weeks, we have covered <a href="/blog/openai-tanstack-npm-supply-chain-credential-theft-2026.html">the OpenAI TanStack supply chain attack</a>, where 84 malicious npm packages stole credentials from employee devices, and the <a href="/blog/microsoft-edge-stores-passwords-plaintext-security-risk.html">Microsoft Edge plaintext password vulnerability</a>, where saved passwords were found to be decryptable in RAM at all times. These stories share a common thread: the tools we trust to store and manage our credentials are increasingly the targets themselves.</p>
 <p>Ransomware and extortion groups are no longer content with encrypting files — they are after credentials, access tokens, and the keys to the kingdom. <a href="/blog/ai-phishing-attacks-surge-1265-percent-2026.html">AI-powered phishing attacks have surged 1,265%</a> this year, and threat actors like TeamPCP are using AI to automate the discovery of vulnerable extensions and packages at a scale humans could not achieve.</p>
-<h2 id="expert-analysis-why-developer-tools-are-the-perfect-target">Expert Analysis: Why Developer Tools Are the Perfect Target</h2>
+<h2 id="expert-analysis-why-developer-tools-are-the-perfect-target">Analysis: Why Developer Tools Are the Perfect Target</h2>
 <p>Roy Akerman of Silverfort offered a sobering perspective on the GitHub breach: <em>"A VS Code extension runs with the same privileges as the editor itself, and once installed it has access to everything the developer can reach. There is no meaningful verification before that code executes. What makes this breach remarkable is not the entry point, it is that TeamPCP used GitHub's own infrastructure as the weapon end to end."</em></p>
 <p>Kayne McGladrey of IEEE echoed this: <em>"VS Code extensions run with full trust, which means that they get access to the developer's filesystem, credentials, cloud keys, SSH keys, and environment variables."</em></p>
 <p>Most security teams still have minimal visibility into what extensions or packages are installed on their developers' machines, or how recently those extensions were published. That blind spot is precisely what attackers like TeamPCP keep exploiting.</p>
