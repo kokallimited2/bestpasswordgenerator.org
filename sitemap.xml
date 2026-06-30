@@ -429,4 +429,10 @@
 <url><loc>https://bestpasswordgenerator.org/password-generator.html</loc><lastmod>2026-06-22</lastmod></url>
 <url><loc>https://bestpasswordgenerator.org/privacy.html</loc><lastmod>2026-06-22</lastmod></url>
 <url><loc>https://bestpasswordgenerator.org/terms-style.html</loc><lastmod>2026-06-22</lastmod></url>
+  <url>
+    <loc>https://bestpasswordgenerator.org/blog/what-to-do-after-a-data-breach-2026.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
