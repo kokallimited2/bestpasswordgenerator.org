@@ -5,6 +5,33 @@
   },
   "posts": [
     {
+      "id": "6569",
+      "slug": "what-to-do-after-a-data-breach-2026",
+      "url": "/blog/what-to-do-after-a-data-breach-2026.html",
+      "title": "What to Do After a Data Breach — 2026 Step-by-Step Recovery Guide",
+      "meta": "Your data was breached — now what? A 2026 step-by-step recovery checklist: change passwords, lock down accounts, freeze credit, spot follow-up phishing, and prevent the next leak.",
+      "date": "30 June 2026",
+      "dateiso": "2026-06-30",
+      "category": "Security Guide",
+      "emoji": "🚨",
+      "featured": false,
+      "readtime": "8 min read",
+      "author": "Ateeq Y Tanoli",
+      "authorTitle": "",
+      "tags": [
+        "data-breach-recovery",
+        "what-to-do-after-breach",
+        "change-passwords",
+        "credit-freeze",
+        "credential-stuffing",
+        "two-factor-authentication",
+        "phishing"
+      ],
+      "excerpt": "Got a breach notification? Work this 2026 recovery checklist in order: change the breached password and every reuse of it, enable 2FA, lock down your email, freeze your credit, and brace for the follow-up phishing wave.",
+      "meta_description": "Your data was breached — now what? A 2026 step-by-step recovery checklist: change passwords, lock down accounts, freeze credit, spot follow-up phishing, and prevent the next leak.",
+      "_commit_msg": "blog: add what-to-do-after-a-data-breach 2026 recovery guide [skip ci]"
+    },
+    {
       "id": "6568",
       "slug": "password-breach-statistics-2026",
       "url": "/blog/password-breach-statistics-2026.html",
