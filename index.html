@@ -21,11 +21,63 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script type="application/ld+json">
-  [
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Best Password Generator","url":"https://bestpasswordgenerator.org/","applicationCategory":"SecurityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"description":"Free online tool generating cryptographically secure passwords with real-time strength analysis, entropy calculation, and crack-time estimation.","featureList":"Password generation, Strength analysis, Entropy calculation, Crack-time estimation, Copy to clipboard"},
-    {"@context":"https://schema.org","@type":"Organization","name":"Best Password Generator","url":"https://bestpasswordgenerator.org/","logo":"https://bestpasswordgenerator.org/assets/img/logo.svg","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"hello@bestpasswordgenerator.org"}},
-    {"@context":"https://schema.org","@type":"WebSite","url":"https://bestpasswordgenerator.org/","name":"Best Password Generator","potentialAction":{"@type":"SearchAction","target":"https://bestpasswordgenerator.org/blog.html?q={search_term_string}","query-input":"required name=search_term_string"}}
-  ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bestpasswordgenerator.org/#organization",
+        "name": "Best Password Generator",
+        "url": "https://bestpasswordgenerator.org/",
+        "logo": "https://bestpasswordgenerator.org/assets/img/logo.svg",
+        "sameAs": [
+          "https://x.com/bestpwgen",
+          "https://www.facebook.com/bestpasswordgenerator"
+        ],
+        "knowsAbout": ["Password security", "Cryptography", "Online safety", "Identity protection"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "hello@bestpasswordgenerator.org"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://bestpasswordgenerator.org/#webapp",
+        "name": "Best Password Generator",
+        "url": "https://bestpasswordgenerator.org/",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        },
+        "description": "Free online tool generating cryptographically secure passwords with real-time strength analysis, entropy calculation, and crack-time estimation.",
+        "featureList": "Password generation, Strength analysis, Entropy calculation, Crack-time estimation, Copy to clipboard",
+        "author": {
+          "@id": "https://bestpasswordgenerator.org/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bestpasswordgenerator.org/#website",
+        "url": "https://bestpasswordgenerator.org/",
+        "name": "Best Password Generator",
+        "publisher": {
+          "@id": "https://bestpasswordgenerator.org/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bestpasswordgenerator.org/blog.html?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
   </script>
 <style>
 :root{--p:#0d2137;--pl:#1a3a5c;--a:#2563eb;--ah:#1d4ed8;--g:#10b981;--am:#f59e0b;--r:#ef4444;--bg:#f8fafc;--bga:#f1f5f9;--card:#fff;--t:#0f172a;--t2:#334155;--t3:#64748b;--bd:#e2e8f0;--rad:12px;--radl:20px;--sh:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.06);--shm:0 4px 6px -1px rgba(0,0,0,.1),0 10px 15px -3px rgba(0,0,0,.05)}
@@ -603,6 +655,7 @@ footer{background:var(--p);color:#fff;padding:56px 0 26px}
     <div class="fbot">
       <p>© 2026 BestPasswordGenerator.org · All rights reserved · Operated by Kokal Operations Ltd, United Kingdom</p>
       <p><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="affiliate-disclosure.html">Affiliates</a> · <a href="cookie-policy.html">Cookies</a></p>
+      <p style="margin-top:6px;font-size:12px">⭐ <a href="https://google.com/preferences/source?q=bestpasswordgenerator.org" rel="noopener" target="_blank" style="color:rgba(255,255,255,.6)">Make us your Preferred Source on Google</a></p>
     </div>
   </div>
 </footer>
@@ -743,6 +796,82 @@ fetch('post.json')
 
 // Auto-generate on load
 doGen();
+
+// -- WebMCP AI Agent Protocol --
+(function(){
+  window.__webmcp = {
+    name: 'BestPasswordGenerator',
+    version: '2.0',
+    description: 'AI-accessible password generator tool API',
+    actions: {
+      generatePassword: {
+        description: 'Generate a cryptographically secure random password with customizable options',
+        parameters: {
+          length: { type: 'number', default: 16, min: 4, max: 128 },
+          useUppercase: { type: 'boolean', default: true },
+          useLowercase: { type: 'boolean', default: true },
+          useNumbers: { type: 'boolean', default: true },
+          useSymbols: { type: 'boolean', default: true }
+        },
+        returns: { type: 'string' },
+        handler: function(p){
+          p = p || {};
+          var ln = p.length || 16;
+          var cs = '';
+          if(p.useUppercase !== false) cs += CH.U;
+          if(p.useLowercase !== false) cs += CH.L;
+          if(p.useNumbers !== false) cs += CH.N;
+          if(p.useSymbols !== false) cs += CH.S;
+          if(!cs) cs = CH.L;
+          var arr = new Uint32Array(ln), pwd = '';
+          crypto.getRandomValues(arr);
+          for(var i = 0; i < ln; i++) pwd += cs[arr[i] % cs.length];
+          return pwd;
+        }
+      },
+      checkStrength: {
+        description: 'Analyze a password and return detailed strength metrics',
+        parameters: { password: { type: 'string', required: true } },
+        returns: { type: 'object' },
+        handler: function(p){
+          if(!p || !p.password) return { error: 'password required' };
+          var ln = p.password.length;
+          if(!ln) return { score: 0, strength: 'Empty', time: '<1 sec', entropy_bits: 0 };
+          var pool = 0;
+          if(/[A-Z]/.test(p.password)) pool += 26;
+          if(/[a-z]/.test(p.password)) pool += 26;
+          if(/[0-9]/.test(p.password)) pool += 10;
+          if(/[^A-Za-z0-9]/.test(p.password)) pool += 33;
+          var ent = Math.round(ln * Math.log2(pool || 26));
+          var comb = Math.pow(pool || 26, ln);
+          var secs = comb / (2 * 1e12);
+          var strength = 'Very Weak';
+          if(ent >= 100) strength = 'Very Strong';
+          else if(ent >= 80) strength = 'Strong';
+          else if(ent >= 60) strength = 'Fair';
+          else if(ent >= 40) strength = 'Weak';
+          function fmtTime(s){
+            if(s < 1) return '<1 sec';
+            if(s < 60) return Math.round(s) + ' secs';
+            if(s < 3600) return Math.round(s/60) + ' mins';
+            if(s < 86400) return Math.round(s/3600) + ' hours';
+            if(s < 31536000) return Math.round(s/86400) + ' days';
+            var y = s/31536000;
+            if(y < 1000) return Math.round(y) + ' yrs';
+            if(y < 1e6) return Math.round(y/1000) + 'K yrs';
+            if(y < 1e9) return Math.round(y/1e6) + 'M yrs';
+            return '∞ uncrackable';
+          }
+          return { score: ent, strength: strength, time: fmtTime(secs), entropy_bits: ent, crack_time_secs: secs };
+        }
+      }
+    },
+    call: function(action, params){
+      var def = this.actions[action];
+      return def ? def.handler(params) : { error: 'unknown action: ' + action };
+    }
+  };
+})();
 </script>
 </body>
 </html>
